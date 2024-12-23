@@ -1,0 +1,163 @@
+{
+  "layout": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "classes": "Kelas",
+    "games": "Permainan",
+    "teachers": "Guru",
+    "contact": "Kontak",
+    "rights": "Hak cipta dilindungi undang-undang."
+  },
+  "notFound": {
+    "oops": "Ups!",
+    "pageNotFound": "Halaman tidak ditemukan",
+    "message": "Sepertinya kami salah menaruh beberapa krayon. Mari kembali dan mewarnai di halaman yang benar!",
+    "goHome": "Kembali ke beranda"
+  },
+  "home": {
+    "about": "Tentang Kami",
+    "classes": "Kelas",
+    "games": "Permainan",
+    "teachers": "Guru",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "title": "Selamat Datang di TK Sinar Mentari",
+    "subtitle": "Di mana pikiran kecil tumbuh dan berkembang!",
+    "enroll": "Daftar Sekarang",
+    "learnMore": "Pelajari Lebih Lanjut"
+  },
+  "about": {
+    "title": "Tentang TK Sinar Mentari",
+    "description": "TK Sinar Mentari adalah tempat di mana anak-anak dapat tumbuh, belajar, dan berkembang dalam lingkungan yang aman dan mendukung. Kami percaya bahwa setiap anak memiliki potensi unik yang dapat dikembangkan melalui pendidikan yang tepat dan perhatian yang penuh kasih.",
+    "philosophyTitle": "Filosofi Kami",
+    "philosophyDescription": "Di TK Sinar Mentari, kami menerapkan metode Montessori yang berfokus pada kemandirian anak, pembelajaran melalui pengalaman, dan penghormatan terhadap perkembangan alami setiap anak. Kami percaya bahwa lingkungan yang terstruktur dengan baik dan kebebasan dalam batas-batas tertentu dapat membantu anak-anak mengembangkan disiplin diri dan kecintaan pada pembelajaran.",
+    "featuresTitle": "Fitur Utama Kami",
+    "features": [
+      {
+        "title": "Lingkungan yang Ramah Anak",
+        "description": "Ruang kelas kami dirancang khusus untuk memenuhi kebutuhan anak-anak, dengan perabotan berukuran anak dan area aktivitas yang beragam."
+      },
+      {
+        "title": "Kurikulum Berbasis Permainan",
+        "description": "Kami percaya bahwa anak-anak belajar paling baik melalui permainan. Kurikulum kami menggabungkan pembelajaran dengan aktivitas yang menyenangkan dan menarik."
+      },
+      {
+        "title": "Guru yang Berpengalaman",
+        "description": "Tim pengajar kami terdiri dari profesional berpengalaman yang berdedikasi untuk mendukung perkembangan setiap anak."
+      },
+      {
+        "title": "Fokus pada Keterampilan Sosial",
+        "description": "Kami menekankan pentingnya keterampilan sosial dan emosional, membantu anak-anak belajar berempati, bekerja sama, dan menyelesaikan konflik."
+      }
+    ]
+  },
+  "classes": {
+    "title": "Kelas Kami",
+    "activities": "Aktivitas Utama",
+    "toddler": {
+      "name": "Kelas Batita",
+      "age": "18 bulan - 3 tahun",
+      "description": "Kelas Batita kami dirancang untuk memperkenalkan anak-anak pada lingkungan sekolah dengan cara yang lembut dan menyenangkan. Fokus utama kami adalah pada pengembangan keterampilan motorik, bahasa, dan sosialisasi awal.",
+      "activities": [
+        "Permainan sensorik",
+        "Aktivitas musik dan gerakan",
+        "Waktu cerita interaktif",
+        "Permainan outdoor yang aman",
+        "Pengenalan keterampilan hidup sehari-hari"
+      ]
+    },
+    "primary": {
+      "name": "Kelas Utama",
+      "age": "3 - 6 tahun",
+      "description": "Kelas Utama kami menerapkan kurikulum Montessori inti, memungkinkan anak-anak untuk mengeksplorasi dan belajar sesuai dengan minat dan kecepatan mereka sendiri. Kami fokus pada pengembangan kemandirian, konsentrasi, dan keterampilan akademik dasar.",
+      "activities": [
+        "Aktivitas kehidupan praktis",
+        "Latihan sensorik",
+        "Pengenalan bahasa dan matematika",
+        "Eksplorasi sains dan alam",
+        "Seni dan kerajinan tangan"
+      ]
+    },
+    "kindergarten": {
+      "name": "Taman Kanak-kanak",
+      "age": "5 - 6 tahun",
+      "description": "Program Taman Kanak-kanak kami mempersiapkan anak-anak untuk transisi ke sekolah dasar. Kami memperdalam pemahaman konsep akademik sambil terus mengembangkan keterampilan sosial dan emosional yang penting.",
+      "activities": [
+        "Persiapan membaca dan menulis lanjutan",
+        "Pengenalan matematika yang lebih kompleks",
+        "Proyek sains hands-on",
+        "Pengembangan keterampilan sosial dan kerja tim",
+        "Pengenalan teknologi sederhana"
+      ]
+    }
+  },
+  "games": {
+    "title": "Belajar Melalui Bermain",
+    "description": "Di TK Sinar Mentari, kami percaya bahwa bermain adalah cara terbaik bagi anak-anak untuk belajar. Melalui permainan, anak-anak mengembangkan keterampilan penting sambil bersenang-senang.",
+    "benefits": "Manfaat",
+    "sensorial": {
+      "name": "Permainan Sensorik",
+      "description": "Permainan sensorik membantu anak-anak mengembangkan dan mempertajam indera mereka. Aktivitas ini penting untuk perkembangan kognitif dan pemahaman dunia di sekitar mereka.",
+      "benefits": [
+        "Meningkatkan koordinasi tangan-mata",
+        "Mengembangkan kemampuan kategorisasi",
+        "Memperkuat memori sensorik",
+        "Mendorong eksplorasi dan kreativitas"
+      ]
+    },
+    "practical": {
+      "name": "Permainan Kehidupan Praktis",
+      "description": "Permainan kehidupan praktis membantu anak-anak belajar keterampilan sehari-hari yang penting. Aktivitas ini meningkatkan kemandirian dan kepercayaan diri anak.",
+      "benefits": [
+        "Mengembangkan kemandirian",
+        "Meningkatkan koordinasi motorik halus",
+        "Membangun rasa tanggung jawab",
+        "Meningkatkan konsentrasi"
+      ]
+    },
+    "language": {
+      "name": "Permainan Bahasa",
+      "description": "Permainan bahasa membantu anak-anak mengembangkan keterampilan komunikasi mereka. Aktivitas ini mencakup berbagai aspek perkembangan bahasa, dari mendengarkan hingga berbicara dan persiapan membaca.",
+      "benefits": [
+        "Memperkaya kosakata",
+        "Meningkatkan kemampuan mendengarkan",
+        "Mengembangkan keterampilan bercerita",
+        "Mempersiapkan untuk membaca dan menulis"
+      ]
+    },
+    "math": {
+      "name": "Permainan Matematika",
+      "description": "Permainan matematika memperkenalkan konsep matematika dasar kepada anak-anak dengan cara yang menyenangkan dan konkret. Aktivitas ini membangun dasar yang kuat untuk pemahaman matematika di masa depan.",
+      "benefits": [
+        "Mengembangkan pemahaman angka",
+        "Memperkenalkan konsep penjumlahan dan pengurangan",
+        "Meningkatkan kemampuan pengenalan pola",
+        "Mengembangkan pemikiran logis"
+      ]
+    }
+  },
+  "teachers": {
+    "title": "Guru-guru Kami",
+    "description": "Tim pengajar kami terdiri dari profesional yang berdedikasi dan berpengalaman dalam pendidikan anak usia dini. Mereka berkomitmen untuk memberikan lingkungan belajar yang positif dan mendukung bagi setiap anak.",
+    "sarah": {
+      "bio": "Ms. Sarah adalah guru utama kami dengan pengalaman lebih dari 10 tahun dalam pendidikan Montessori. Dia memiliki passion untuk membantu anak-anak mengembangkan kecintaan pada pembelajaran."
+    },
+    "john": {
+      "bio": "Mr. John adalah asisten guru yang energik dan kreatif. Dengan latar belakang dalam seni, dia membawa kreativitas ke dalam kelas dan menginspirasi anak-anak untuk mengekspresikan diri mereka."
+    },
+    "emily": {
+      "bio": "Ms. Emily adalah spesialis Montessori kami. Dengan sertifikasi khusus dalam metode Montessori, dia memastikan bahwa prinsip-prinsip Montessori diterapkan dengan benar di seluruh kurikulum kami."
+    },
+    "joinTitle": "Bergabunglah dengan Tim Kami",
+    "joinDescription": "Kami selalu mencari pendidik yang bersemangat untuk bergabung dengan tim kami. Jika Anda memiliki passion untuk pendidikan anak usia dini dan ingin membuat perbedaan, kami ingin mendengar dari Anda!"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "contactInfo": "Informasi Kontak",
+    "address": "Jl. Pendidikan No. 123, Jakarta",
+    "phone": "+62 21 1234 5678",
+    "email": "info@tksinarmenta",
+    "or": "atau"
+  }
+}

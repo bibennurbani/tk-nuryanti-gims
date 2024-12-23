@@ -1,0 +1,172 @@
+{
+  "layout": {
+    "home": "Home",
+    "about": "About",
+    "classes": "Classes",
+    "games": "Games",
+    "teachers": "Teachers",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "oops": "Oops!",
+    "pageNotFound": "Page not found",
+    "message": "Looks like we've misplaced some crayons. Let's go back and color on the right page!",
+    "goHome": "Go back home"
+  },
+  "home": {
+    "about": "About Us",
+    "classes": "Classes",
+    "games": "Games",
+    "teachers": "Teachers",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to Sunshine Kindergarten",
+    "subtitle": "Where little minds grow and flourish!",
+    "enroll": "Enroll Now",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Sunshine Kindergarten",
+    "description": "Sunshine Kindergarten is a place where children can grow, learn, and thrive in a safe and supportive environment. We believe that every child has unique potential that can be nurtured through proper education and loving attention.",
+    "philosophyTitle": "Our Philosophy",
+    "philosophyDescription": "At Sunshine Kindergarten, we implement the Montessori method which focuses on child independence, learning through experience, and respect for each child's natural development. We believe that a well-structured environment with freedom within limits can help children develop self-discipline and a love for learning.",
+    "featuresTitle": "Our Key Features",
+    "features": [
+      {
+        "title": "Child-Friendly Environment",
+        "description": "Our classrooms are specially designed to meet children's needs, with child-sized furniture and diverse activity areas."
+      },
+      {
+        "title": "Play-Based Curriculum",
+        "description": "We believe children learn best through play. Our curriculum integrates learning with fun and engaging activities."
+      },
+      {
+        "title": "Experienced Teachers",
+        "description": "Our teaching team consists of experienced professionals dedicated to supporting each child's development."
+      },
+      {
+        "title": "Focus on Social Skills",
+        "description": "We emphasize the importance of social and emotional skills, helping children learn empathy, cooperation, and conflict resolution."
+      }
+    ]
+  },
+  "classes": {
+    "title": "Our Classes",
+    "activities": "Key Activities",
+    "toddler": {
+      "name": "Toddler Class",
+      "age": "18 months - 3 years",
+      "description": "Our Toddler Class is designed to introduce children to the school environment in a gentle and fun way. Our main focus is on developing motor skills, language, and early socialization.",
+      "activities": [
+        "Sensory play",
+        "Music and movement activities",
+        "Interactive storytime",
+        "Safe outdoor play",
+        "Introduction to everyday life skills"
+      ]
+    },
+    "primary": {
+      "name": "Primary Class",
+      "age": "3 - 6 years",
+      "description": "Our Primary Class implements the core Montessori curriculum, allowing children to explore and learn according to their own interests and pace. We focus on developing independence, concentration, and basic academic skills.",
+      "activities": [
+        "Practical life activities",
+        "Sensorial exercises",
+        "Introduction to language and mathematics",
+        "Science and nature exploration",
+        "Arts and crafts"
+      ]
+    },
+    "kindergarten": {
+      "name": "Kindergarten",
+      "age": "5 - 6 years",
+      "description": "Our Kindergarten program prepares children for the transition to elementary school. We deepen understanding of academic concepts while continuing to develop important social and emotional skills.",
+      "activities": [
+        "Advanced reading and writing preparation",
+        "Introduction to more complex mathematics",
+        "Hands-on science projects",
+        "Development of social skills and teamwork",
+        "Introduction to simple technology"
+      ]
+    }
+  },
+  "games": {
+    "title": "Learning Through Play",
+    "description": "At Sunshine Kindergarten, we believe that play is the best way for children to learn. Through games, children develop essential skills while having fun.",
+    "benefits": "Benefits",
+    "sensorial": {
+      "name": "Sensorial Games",
+      "description": "Sensorial games help children develop and refine their senses. These activities are crucial for cognitive development and understanding the world around them.",
+      "benefits": [
+        "Improve hand-eye coordination",
+        "Develop categorization skills",
+        "Strengthen sensory memory",
+        "Encourage exploration and creativity"
+      ]
+    },
+    "practical": {
+      "name": "Practical Life Games",
+      "description": "Practical life games help children learn essential everyday skills. These activities enhance children's independence and self-confidence.",
+      "benefits": [
+        "Develop independence",
+        "Improve fine motor coordination",
+        "Build a sense of responsibility",
+        "Enhance concentration"
+      ]
+    },
+    "language": {
+      "name": "Language Games",
+      "description": "Language games help children develop their communication skills. These activities cover various aspects of language development, from listening to speaking and reading preparation.",
+      "benefits": [
+        "Enrich vocabulary",
+        "Improve listening skills",
+        "Develop storytelling abilities",
+        "Prepare for reading and writing"
+      ]
+    },
+    "math": {
+      "name": "Math Games",
+      "description": "Math games introduce basic mathematical concepts to children in a fun and concrete way. These activities build a strong foundation for future mathematical understanding.",
+      "benefits": [
+        "Develop number sense",
+        "Introduce addition and subtraction concepts",
+        "Enhance pattern recognition skills",
+        "Develop logical thinking"
+      ]
+    }
+  },
+  "teachers": {
+    "title": "Our Teachers",
+    "description": "Our teaching team consists of dedicated professionals experienced in early childhood education. They are committed to providing a positive and supportive learning environment for every child.",
+    "sarah": {
+      "bio": "Ms. Sarah is our lead teacher with over 10 years of experience in Montessori education. She has a passion for helping children develop a love for learning."
+    },
+    "john": {
+      "bio": "Mr. John is an energetic and creative assistant teacher. With a background in arts, he brings creativity into the classroom and inspires children to express themselves."
+    },
+    "emily": {
+      "bio": "Ms. Emily is our Montessori specialist. With special certification in the Montessori method, she ensures that Montessori principles are correctly applied throughout our curriculum."
+    },
+    "joinTitle": "Join Our Team",
+    "joinDescription": "We're always looking for passionate educators to join our team. If you have a passion for early childhood education and want to make a difference, we'd love to hear from you!"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "ourContactInfo": "Contact Information",
+    "ourAddress": "123 Education St., New York",
+    "ourPhone": "+1 (555) 123-4567",
+    "ourEmail": "info@sunshinekindergarten.com",
+    "contactForm": "Contact Form",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "messageSent": "Message Sent!",
+    "messageConfirmation": "We'll get back to you soon.",
+    "emailUs": "Send Email",
+    "or": "Or",
+    "whatsapp": "Send Whatsapp"
+  }
+}
