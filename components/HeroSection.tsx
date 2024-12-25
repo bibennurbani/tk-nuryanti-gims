@@ -1,5 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { RegistrationModal } from '@/components/RegistrationModal';
 
 interface HeroSectionProps {
   title: string;
@@ -8,6 +12,8 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle, imageSrc }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className='relative h-[600px]'>
       <Image src={imageSrc} alt='Hero Image' layout='fill' objectFit='cover' />
@@ -17,11 +23,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle, imageSrc }) 
           <p className='text-xl md:text-2xl mb-8'>{subtitle}</p>
           <Button
             size='lg'
-            className='bg-pastel-blue-500 hover:bg-pastel-blue-600 text-white transition-all duration-300 transform hover:scale-105'>
+            className='bg-pastel-blue-500 hover:bg-pastel-blue-600 text-white transition-all duration-300 transform hover:scale-105'
+            onClick={() => setIsModalOpen(true)}>
             Daftar Sekarang!
           </Button>
         </div>
       </div>
+      <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };
