@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, Heart, Globe, Music, Palette, Book } from 'lucide-react';
+import { Globe, Music, Palette, Book } from 'lucide-react';
 import Image from 'next/image';
 
 const programs = [

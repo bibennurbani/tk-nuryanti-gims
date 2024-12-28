@@ -56,7 +56,9 @@ export function Testimonials() {
               <Card className='h-full hover:shadow-lg transition-all duration-300'>
                 <CardContent className='p-8'>
                   <Quote className='w-12 h-12 text-primary mb-6' />
-                  <p className='text-gray-600 mb-6 italic'>"{testimonial.quote}"</p>
+                  <p className='text-gray-600 mb-6 italic'>
+                    &quot;{testimonial.quote}&quot;
+                  </p>
                   <div className='flex items-center'>
                     <div className='relative w-12 h-12 rounded-full overflow-hidden mr-4'>
                       <Image
