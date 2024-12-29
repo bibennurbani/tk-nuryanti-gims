@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Program {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  icon        String
+  color       String
+  image       String
+}
+
+model Testimonial {
+  id    Int    @id @default(autoincrement())
+  name  String
+  role  String
+  image String
+  quote String
+}
+
+model Statistic {
+  id    Int    @id @default(autoincrement())
+  icon  String
+  value String
+  label String
+  color String
+}
+
+model Teacher {
+  id          Int    @id @default(autoincrement())
+  name        String
+  role        String
+  image       String
+  description String
+}
+
+model Game {
+  id          Int    @id @default(autoincrement())
+  name        String
+  image       String
+  description String
+  ageGroup    String
+}
+
+model FAQ {
+  id       Int    @id @default(autoincrement())
+  question String
+  answer   String
+}
+
