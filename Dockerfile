@@ -4,21 +4,24 @@ FROM node:18-alpine
 # Set the working directory
 WORKDIR /app
 
+# Install pnpm globally
+RUN npm install -g pnpm
+
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN pnpm install
 
 # Copy the rest of your app's source code
 COPY . .
 
 # Build your Next.js app
-RUN npm run build
+RUN pnpm build
 
 # Expose the port Next.js runs on
 EXPOSE 3000
 
 # Start the app
-CMD ["npm", "start"]
+CMD ["pnpm", "start"]
 
