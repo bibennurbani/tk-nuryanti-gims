@@ -1,7 +1,5 @@
-version: '3'
-
 services:
-  web:
+  nuryanti-gims:
     build: .
     ports:
       - '3000:3000'
@@ -13,4 +11,16 @@ services:
       - SMTP_PASS=${SMTP_PASS}
       - ADMIN_EMAIL=${ADMIN_EMAIL}
       - WHATSAPP_NUMBER=${WHATSAPP_NUMBER}
-    restart: always
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.nuryanti-gims.entrypoints=https'
+      - 'traefik.http.routers.nuryanti-gims.rule=Host(`nuryantiislamicmontessori.com`)'
+      - 'traefik.http.routers.nuryanti-gims.tls=true'
+      - 'traefik.http.services.nuryanti-gims.loadbalancer.server.port=3000'
+
+networks:
+  proxy:
+    external: true
