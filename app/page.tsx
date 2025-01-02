@@ -15,11 +15,18 @@ import { motion } from 'framer-motion';
 import { FeaturedPrograms } from '@/components/FeaturedPrograms';
 import { Statistics } from '@/components/Statistics';
 import { Testimonials } from '@/components/Testimonials';
+import { Metadata } from 'next';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
+};
+
+export const metadata: Metadata = {
+  title: 'Beranda',
+  description:
+    'TK Nuryanti Global Islamic Montessori School - Pendidikan anak usia dini dengan metode Montessori dan nilai-nilai Islam',
 };
 
 export default function Home() {
@@ -32,7 +39,9 @@ export default function Home() {
       />
 
       {/* Introduction Section */}
-      <section className='py-20 bg-white'>
+      <section
+        className='py-20 bg-white'
+        aria-label='Introduction to TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <motion.div
             className='max-w-4xl mx-auto text-center'
@@ -59,7 +68,9 @@ export default function Home() {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className='py-20 bg-gradient-to-b from-pastel-green-500/10 to-cream-100'>
+      <section
+        className='py-20 bg-gradient-to-b from-pastel-green-500/10 to-cream-100'
+        aria-label='Vision and mission TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
             <motion.div
@@ -118,7 +129,9 @@ export default function Home() {
       </section>
 
       {/* Core Values Section */}
-      <section className='py-20 bg-white'>
+      <section
+        className='py-20 bg-white'
+        aria-label='Core and Values of TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <motion.h2
             className='text-3xl md:text-4xl font-bold text-center mb-16'
@@ -195,7 +208,9 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section */}
-      <section className='py-20 bg-cream-100'>
+      <section
+        className='py-20 bg-cream-100'
+        aria-label='Philosophy of TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <motion.h2
             className='text-3xl md:text-4xl font-bold text-center mb-16'
@@ -258,7 +273,9 @@ export default function Home() {
       </section>
 
       {/* Advantages Section */}
-      <section className='py-20 bg-white'>
+      <section
+        className='py-20 bg-white'
+        aria-label='Advantages of TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <motion.h2
             className='text-3xl md:text-4xl font-bold text-center mb-16'

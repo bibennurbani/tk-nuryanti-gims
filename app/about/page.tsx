@@ -1,6 +1,13 @@
 import HeroSection from '@/components/HeroSection';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tentang Kami',
+  description:
+    'Pelajari lebih lanjut tentang TK Nuryanti Global Islamic Montessori School dan filosofi pendidikan kami',
+};
 
 export default function AboutPage() {
   return (

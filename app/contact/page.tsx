@@ -4,6 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Kami',
+  description: 'Contact kami di TK Nuryanti Global Islamic Montessori School',
+};
 
 export default function ContactPage() {
   return (
