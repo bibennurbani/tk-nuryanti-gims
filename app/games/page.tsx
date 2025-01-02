@@ -2,6 +2,12 @@ import HeroSection from '@/components/HeroSection';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Games Montesorri',
+  description: 'Games Montesorri di TK Nuryanti Global Islamic Montessori School',
+};
 
 const games = [
   {

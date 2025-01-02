@@ -15,18 +15,11 @@ import { motion } from 'framer-motion';
 import { FeaturedPrograms } from '@/components/FeaturedPrograms';
 import { Statistics } from '@/components/Statistics';
 import { Testimonials } from '@/components/Testimonials';
-import { Metadata } from 'next';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
-};
-
-export const metadata: Metadata = {
-  title: 'Beranda',
-  description:
-    'TK Nuryanti Global Islamic Montessori School - Pendidikan anak usia dini dengan metode Montessori dan nilai-nilai Islam',
 };
 
 export default function Home() {
