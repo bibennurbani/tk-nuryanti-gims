@@ -6,7 +6,7 @@ const Navbar = () => {
     <header className='bg-pastel-green-500 p-4'>
       <nav className='container mx-auto flex flex-wrap justify-between items-center'>
         <Link href='/' className='flex items-center'>
-          <Image src='/logo.jpg' alt='TK Nuryanti Logo' width={50} height={50} />
+          <Image src='/logo.png' alt='TK Nuryanti Logo' width={50} height={50} />
         </Link>
         <div className='flex flex-wrap space-x-4'>
           <Link href='/' className='text-white hover:text-pastel-blue-300'>
