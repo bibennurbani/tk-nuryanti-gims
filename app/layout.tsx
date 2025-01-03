@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Nunito_Sans } from 'next/font/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -61,6 +62,7 @@ export function generateMetadata({}): Metadata {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='id'>
+      <GoogleTagManager gtmId='GTM-P6NVZ3VX' />
       <Head>
         <link rel='canonical' href='https://nuryantiislamicmontessori.com/' />
         <meta name='robots' content='index, follow' />
