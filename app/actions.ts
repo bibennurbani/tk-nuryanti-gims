@@ -34,8 +34,8 @@ export async function registerStudent(formData: FormData) {
   try {
     // Send email
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
-      to: adminEmail,
+      from: adminEmail,
+      to: [email as string, 'registration@nuryantiislamicmontessori.com'],
       subject: 'Pendaftaran Siswa Baru',
       text: emailContent,
     });
