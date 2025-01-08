@@ -30,7 +30,7 @@ export async function registerStudent(formData: FormData) {
 
     // Send email to registration team
     await sendEmail(
-      'registration@nuryantiislamicmontessori.com',
+      'registrasi@nuryantiislamicmontessori.com',
       'Pendaftaran Siswa Baru',
       registrationEmailContent
     );
