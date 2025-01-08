@@ -5,10 +5,12 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
+import { validateEnv } from '@/lib/env';
 
 const nunitoSans = Nunito_Sans({ subsets: ['latin'] });
 
 export function generateMetadata({}): Metadata {
+  validateEnv();
   return {
     title: {
       default: 'TK Nuryanti Global Islamic Montessori School',
