@@ -1,3 +1,9 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -7,8 +13,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+model Teacher {
+  id          String @id @default(cuid())
+  name        String
+  role        String
+  image       String
+  description String
+}
+
 model Program {
-  id          Int      @id @default(autoincrement())
+  id          String @id @default(cuid())
   title       String
   description String
   icon        String
@@ -17,40 +32,27 @@ model Program {
 }
 
 model Testimonial {
-  id    Int    @id @default(autoincrement())
+  id    String @id @default(cuid())
   name  String
   role  String
   image String
   quote String
 }
 
-model Statistic {
-  id    Int    @id @default(autoincrement())
-  icon  String
-  value String
-  label String
-  color String
-}
-
-model Teacher {
-  id          Int    @id @default(autoincrement())
-  name        String
-  role        String
-  image       String
-  description String
-}
-
 model Game {
-  id          Int    @id @default(autoincrement())
+  id          String @id @default(cuid())
   name        String
   image       String
   description String
   ageGroup    String
 }
 
-model FAQ {
-  id       Int    @id @default(autoincrement())
-  question String
-  answer   String
+model Student {
+  id         String @id @default(cuid())
+  childName  String
+  parentName String
+  email      String
+  phone      String
+  address    String
 }
 
