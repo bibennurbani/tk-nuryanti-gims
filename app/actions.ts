@@ -1,7 +1,6 @@
 'use server';
 
 import nodemailer from 'nodemailer';
-import prisma from '@/lib/prisma';
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -34,15 +33,15 @@ export async function registerStudent(formData: FormData) {
 
   try {
     // Save student data to the database
-    await prisma.student.create({
-      data: {
-        childName,
-        parentName,
-        email,
-        phone,
-        address,
-      },
-    });
+    // await prisma.student.create({
+    //   data: {
+    //     childName,
+    //     parentName,
+    //     email,
+    //     phone,
+    //     address,
+    //   },
+    // });
 
     // Send email to registration team
     await transporter.sendMail({
