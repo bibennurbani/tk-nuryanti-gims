@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TK Nuryanti Global Islamic Montessori School
+
+This project is a website for TK Nuryanti Global Islamic Montessori School, built with Next.js, React, and Prisma ORM. It showcases the school's programs, facilities, and provides a registration system for new students.
+
+## Technologies Used
+
+- Next.js 15.1.4
+- React 18
+- TypeScript
+- Prisma ORM
+- PostgreSQL
+- Tailwind CSS
+- Docker (for development database)
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (version 18 or later)
+- pnpm
+- Docker and Docker Compose
+- Git
 
 ## Getting Started
 

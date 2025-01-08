@@ -1,51 +1,58 @@
-// generator client {
-//   provider = "prisma-client-js"
-// }
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// datasource db {
-//   provider = "postgresql"
-//   url      = env("DATABASE_URL")
-// }
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
-// model Teacher {
-//   id          String @id @default(cuid())
-//   name        String
-//   role        String
-//   image       String
-//   description String
-// }
+generator client {
+  provider = "prisma-client-js"
+}
 
-// model Program {
-//   id          String @id @default(cuid())
-//   title       String
-//   description String
-//   icon        String
-//   color       String
-//   image       String
-// }
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 
-// model Testimonial {
-//   id    String @id @default(cuid())
-//   name  String
-//   role  String
-//   image String
-//   quote String
-// }
 
-// model Game {
-//   id          String @id @default(cuid())
-//   name        String
-//   image       String
-//   description String
-//   ageGroup    String
-// }
+model Teacher {
+  id          String @id @default(cuid())
+  name        String
+  role        String
+  image       String
+  description String
+}
 
-// model Student {
-//   id         String @id @default(cuid())
-//   childName  String
-//   parentName String
-//   email      String
-//   phone      String
-//   address    String
-// }
+model Program {
+  id          String @id @default(cuid())
+  title       String
+  description String
+  icon        String
+  color       String
+  image       String
+}
+
+model Testimonial {
+  id    String @id @default(cuid())
+  name  String
+  role  String
+  image String
+  quote String
+}
+
+model Game {
+  id          String @id @default(cuid())
+  name        String
+  image       String
+  description String
+  ageGroup    String
+}
+
+model Student {
+  id         String @id @default(cuid())
+  childName  String
+  parentName String
+  email      String
+  phone      String
+  address    String
+}
 
