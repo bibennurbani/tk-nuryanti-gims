@@ -55,7 +55,7 @@ export default function GamesPage() {
       <HeroSection
         title='Permainan Edukatif Montessori'
         subtitle='Belajar Sambil Bermain dengan Metode Montessori'
-        imageSrc='/games-hero.jpg'
+        imageSrc='/assets/montessori-hero.gif'
       />
 
       <section className='py-16 bg-white'>

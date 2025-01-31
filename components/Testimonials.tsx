@@ -62,7 +62,7 @@ export function Testimonials() {
                   <div className='flex items-center'>
                     <div className='relative w-12 h-12 rounded-full overflow-hidden mr-4'>
                       <Image
-                        src={testimonial.image}
+                        src='/placeholder.svg'
                         alt={testimonial.name}
                         fill
                         className='object-cover'

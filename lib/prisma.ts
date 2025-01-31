@@ -1,14 +1,14 @@
-// import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
-// const prismaClientSingleton = () => {
-//   return new PrismaClient();
-// };
+const prismaClientSingleton = () => {
+  return new PrismaClient();
+};
 
-// // eslint-disable-next-line @typescript-eslint/no-unused-vars
-// type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>;
 
-// const prisma = prismaClientSingleton();
+const prisma = prismaClientSingleton();
 
-// export default prisma;
+export default prisma;
 
-// export { prisma };
+export { prisma };
