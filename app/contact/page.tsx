@@ -17,7 +17,7 @@ export default function ContactPage() {
       <HeroSection
         title='Hubungi Kami'
         subtitle='Kami Siap Membantu Anda'
-        imageSrc='/contact-hero.jpg'
+        imageSrc='/assets/montessori-hero.gif'
       />
 
       <section className='py-16 bg-white'>

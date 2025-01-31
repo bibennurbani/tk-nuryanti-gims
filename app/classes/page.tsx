@@ -15,7 +15,7 @@ export default function ClassesPage() {
       <HeroSection
         title='Kelas Montessori Kami'
         subtitle='Lingkungan Belajar yang Mendukung Perkembangan Anak'
-        imageSrc='/classes-hero.jpg'
+        imageSrc='/assets/montessori-hero.gif'
       />
 
       <section className='py-16 bg-white'>
@@ -28,7 +28,7 @@ export default function ClassesPage() {
                   Kelompok Bermain (2-3 tahun)
                 </h3>
                 <Image
-                  src='/toddler-class.jpg'
+                  src='/assets/kelas/Kelas1.jpeg'
                   alt='Kelas Kelompok Bermain'
                   width={300}
                   height={200}
@@ -44,7 +44,7 @@ export default function ClassesPage() {
               <CardContent className='p-6'>
                 <h3 className='text-xl font-semibold mb-4'>TK A (3-4 tahun)</h3>
                 <Image
-                  src='/tk-a-class.jpg'
+                  src='/assets/kelas/Kelas2.jpeg'
                   alt='Kelas TK A'
                   width={300}
                   height={200}
@@ -60,7 +60,7 @@ export default function ClassesPage() {
               <CardContent className='p-6'>
                 <h3 className='text-xl font-semibold mb-4'>TK B (5-6 tahun)</h3>
                 <Image
-                  src='/tk-b-class.jpg'
+                  src='/assets/kelas/Kelas3.jpeg'
                   alt='Kelas TK B'
                   width={300}
                   height={200}
