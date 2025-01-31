@@ -45,7 +45,7 @@ export default function TeachersPage() {
       <HeroSection
         title='Guru Montessori Kami'
         subtitle='Tim Pengajar Berpengalaman dan Berdedikasi'
-        imageSrc='/teachers-hero.jpg'
+        imageSrc='/assets/montessori-hero.gif'
       />
 
       <section className='py-16 bg-white'>

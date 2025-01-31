@@ -15,7 +15,7 @@ export default function AboutPage() {
       <HeroSection
         title='Tentang TK Nuryanti'
         subtitle='Mengenal Lebih Dekat Sekolah Montessori Kami'
-        imageSrc='/about-hero.jpg'
+        imageSrc='/assets/montessori-hero.gif'
       />
 
       <section className='py-16 bg-white'>
@@ -36,7 +36,7 @@ export default function AboutPage() {
               </p>
             </div>
             <Image
-              src='/montessori-learning.jpg'
+              src='/assets/montessori/montessori3.jpg'
               alt='Anak-anak belajar dengan metode Montessori'
               width={500}
               height={300}
@@ -131,12 +131,12 @@ export default function AboutPage() {
         <div className='container mx-auto'>
           <h2 className='text-3xl font-bold text-center mb-12'>Galeri Foto</h2>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((index) => (
               <div
                 key={index}
                 className='relative aspect-square overflow-hidden rounded-lg shadow-md'>
                 <Image
-                  src={`/gallery-${index}.jpg`}
+                  src={`/assets/montessori/montessori${index}.jpg`}
                   alt={`Galeri foto ${index}`}
                   layout='fill'
                   objectFit='cover'

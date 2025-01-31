@@ -11,28 +11,28 @@ const programs = [
     description: 'Menghafal Al-Quran dengan metode yang menyenangkan',
     icon: Book,
     color: 'bg-sunshine-yellow-300',
-    image: '/tahfidz-program.jpg',
+    image: '/assets/tahfidz-program.png',
   },
   {
     title: 'Program Seni & Kreativitas',
     description: 'Mengembangkan bakat seni dan kreativitas anak',
     icon: Palette,
     color: 'bg-coral-pink-300',
-    image: '/art-program.jpg',
+    image: '/assets/montessori/montessori3.jpg',
   },
   {
     title: 'Program Musik & Gerak',
     description: 'Eksplorasi musik dan pengembangan motorik',
     icon: Music,
     color: 'bg-pastel-blue-300',
-    image: '/music-program.jpg',
+    image: '/assets/montessori/montessori4.jpg',
   },
   {
     title: 'Program Global Culture',
     description: 'Pengenalan budaya dan bahasa internasional',
     icon: Globe,
     color: 'bg-pastel-green-300',
-    image: '/global-program.jpg',
+    image: '/assets/montessori/montessori7.jpg',
   },
 ];
 

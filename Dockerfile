@@ -1,5 +1,5 @@
-# Use the official Node.js 18 image as a parent image
-FROM node:18-alpine
+# Stage 1: Build
+FROM node:18-alpine AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -7,21 +7,38 @@ WORKDIR /app
 # Install pnpm globally
 RUN npm install -g pnpm
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy package.json, package-lock.json, and pnpm-lock.yaml
+COPY package*.json pnpm-lock.yaml ./
 
-# Install dependencies
-RUN pnpm install
+# Install dependencies using the lock file
+RUN pnpm install --frozen-lockfile --prod
 
-# Copy the rest of your app's source code
+# Copy the rest of the application source code
 COPY . .
 
-# Build your Next.js app
+# Build the Next.js app
 RUN pnpm build
 
-# Expose the port Next.js runs on
+# Stage 2: Production
+FROM node:18-alpine AS runtime
+
+# Set the working directory
+WORKDIR /app
+
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Copy only the necessary files from the build stage
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+
+# Expose the port the app runs on
 EXPOSE 3000
 
-# Start the app
-CMD ["pnpm", "start"]
+# Set environment to production
+ENV NODE_ENV=production
 
+# Start the application
+CMD ["pnpm", "start"]

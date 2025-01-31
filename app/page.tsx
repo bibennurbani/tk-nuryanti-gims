@@ -28,7 +28,7 @@ export default function Home() {
       <HeroSection
         title='Belajar Mandiri dan Kreatif dengan Metode Montessori'
         subtitle='di TK Nuryanti Global Islamic Montessori School'
-        imageSrc='/hero-image.jpg'
+        imageSrc='/assets/montessori-hero.gif'
       />
 
       {/* Introduction Section */}
@@ -111,7 +111,7 @@ export default function Home() {
               transition={fadeIn.transition}
               viewport={{ once: true }}>
               <Image
-                src='/vision-mission.jpg'
+                src='/assets/visi-misi.svg'
                 alt='Anak-anak belajar dengan metode Montessori'
                 fill
                 className='object-cover'
@@ -287,7 +287,7 @@ export default function Home() {
               viewport={{ once: true }}>
               <div className='relative w-32 h-32 mb-6'>
                 <Image
-                  src='/certified-teacher.svg'
+                  src='/assets/certified3.png'
                   alt='Guru Tersertifikasi'
                   fill
                   className='object-contain'
@@ -308,7 +308,7 @@ export default function Home() {
               viewport={{ once: true }}>
               <div className='relative w-32 h-32 mb-6'>
                 <Image
-                  src='/quality-toys.svg'
+                  src='/pink-tower.jpg'
                   alt='Mainan Berkualitas'
                   fill
                   className='object-contain'
@@ -329,7 +329,7 @@ export default function Home() {
               viewport={{ once: true }}>
               <div className='relative w-32 h-32 mb-6'>
                 <Image
-                  src='/supportive-environment.svg'
+                  src='/assets/kelas/Kelas0.png'
                   alt='Lingkungan Mendukung'
                   fill
                   className='object-contain'
