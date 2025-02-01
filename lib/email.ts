@@ -43,18 +43,18 @@ export function generateRegistrationEmailContent(formData: {
 
 export function generateConfirmationEmailContent(parentName: string, childName: string) {
   return `
-    Kepada Yth. ${parentName},
+Kepada Yth. ${parentName},
 
-    Terima kasih telah mendaftarkan ${childName} di TK Nuryanti Global Islamic Montessori School.
+Terima kasih telah mendaftarkan ${childName} di TK Nuryanti Global Islamic Montessori School.
 
-    Kami telah menerima pendaftaran Anda dan sedang memproses data yang Anda berikan. Tim kami akan menghubungi Anda dalam waktu 2-3 hari kerja untuk informasi lebih lanjut mengenai proses pendaftaran.
+Kami telah menerima pendaftaran Anda dan sedang memproses data yang Anda berikan. Tim kami akan menghubungi Anda dalam waktu 2-3 hari kerja untuk informasi lebih lanjut mengenai proses pendaftaran.
 
-    Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami di nomor telepon (62) 85721549005 atau membalas email ini.
+Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami di nomor telepon ${process.env.WHATSAPP_NUMBER} atau membalas email ini.
 
-    Terima kasih atas kepercayaan Anda kepada TK Nuryanti Global Islamic Montessori School.
+Terima kasih atas kepercayaan Anda kepada TK Nuryanti Global Islamic Montessori School.
 
-    Salam,
-    Tim Pendaftaran
-    TK Nuryanti Global Islamic Montessori School
+Salam,
+Tim Pendaftaran
+TK Nuryanti Global Islamic Montessori School
   `;
 }

@@ -11,28 +11,28 @@ export const metadata: Metadata = {
 
 const teachers = [
   {
-    name: 'Ibu Citra',
+    name: 'Citra, S.Pd.',
     role: 'Guru Kelas',
     image: '/placeholder.svg',
     description:
       'Guru lulusan Universitas Pendidikan Indonesia yang sudah memiliki sertifikasi untuk menjadi guru montessori, Berpengalaman dalam pendidikan montessori dan manajemen sekolah',
   },
   {
-    name: 'Bapak Destian Nurfadli Hasan',
+    name: 'Destian Nurfadli Hasan, S.Pd.',
     role: 'Guru Kelas',
     image: '/placeholder.svg',
     description:
       'Guru lulusan Universitas Pendidikan Indonesia yang sudah memiliki sertifikasi untuk menjadi guru montessori,Spesialis dalam pengembangan literasi dan numerasi anak usia dini.',
   },
   {
-    name: 'Bapak Biben Nurbani Hasan',
+    name: 'Biben Nurbani Hasan,A.Md.T., S.T. ',
     role: 'Guru Kelas',
     image: '/placeholder.svg',
     description:
       'Guru lulusan Universitas Pasundan yang mahir dalam technology informasi dan algoritma, berpengalaman mengajarkan metode coding dalam pendidikan anak',
   },
   {
-    name: 'Ibu Lena Nuryanti',
+    name: 'Prof. Dr. B Lena Nuryanti Sastradinata, M.Pd.',
     role: 'Kepala Sekolah & Ketua Yayasan',
     image: '/placeholder.svg',
     description:
