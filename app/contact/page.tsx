@@ -73,7 +73,7 @@ export default function ContactPage() {
                     <MapPin className='w-6 h-6 mr-2 text-pastel-green-500' />
                     <p>
                       Jl. Teratai Mekar VIII No.27, Mekar Mulya, Kec. Panyileukan, Kota
-                      Bandung, Jawa Barat 40292
+                      Bandung, Jawa Barat 40614
                     </p>
                   </div>
                   <div className='flex items-center'>
@@ -104,7 +104,7 @@ export default function ContactPage() {
           <h2 className='text-3xl font-bold text-center mb-12'>Lokasi Kami</h2>
           <div className='aspect-w-16 aspect-h-9'>
             <iframe
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7002574995245!2d107.69663047593384!3d-6.926387593073369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c2cc99fc8079%3A0x48ccc2041109c248!2sJl.%20Teratai%20Mekar%20VIII%20No.27%2C%20Mekar%20Mulya%2C%20Kec.%20Panyileukan%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040292!5e0!3m2!1sen!2sid!4v1735034223983!5m2!1sen!2sid'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7002574995245!2d107.69663047593384!3d-6.926387593073369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c2cc99fc8079%3A0x48ccc2041109c248!2sJl.%20Teratai%20Mekar%20VIII%20No.27%2C%20Mekar%20Mulya%2C%20Kec.%20Panyileukan%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040614!5e0!3m2!1sen!2sid!4v1735034223983!5m2!1sen!2sid'
               width='100%'
               height='450'
               style={{ border: 0 }}

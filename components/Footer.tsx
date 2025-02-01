@@ -50,7 +50,7 @@ const Footer = () => {
             <h4 className='text-lg font-semibold mb-2'>Hubungi Kami</h4>
             <p>
               Jl. Teratai Mekar VIII No.27, Mekar Mulya, Kec. Panyileukan, Kota Bandung,
-              Jawa Barat 40292
+              Jawa Barat 40614
             </p>
             <p>Telepon: 6285819900061</p>
             <p>Email: admin@nuryantiislamicmontessori.com</p>
