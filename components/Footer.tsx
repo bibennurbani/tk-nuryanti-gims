@@ -48,9 +48,12 @@ const Footer = () => {
           </div>
           <div className='w-full md:w-1/3'>
             <h4 className='text-lg font-semibold mb-2'>Hubungi Kami</h4>
-            <p>Jl. Montessori No. 123, Jakarta</p>
-            <p>Telepon: (021) 1234-5678</p>
-            <p>Email: info@tknuryanti.com</p>
+            <p>
+              Jl. Teratai Mekar VIII No.27, Mekar Mulya, Kec. Panyileukan, Kota Bandung,
+              Jawa Barat 40292
+            </p>
+            <p>Telepon: 6285819900061</p>
+            <p>Email: admin@nuryantiislamicmontessori.com</p>
           </div>
         </div>
         <div className='mt-8 text-center'>

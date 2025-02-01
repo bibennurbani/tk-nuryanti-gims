@@ -71,15 +71,18 @@ export default function ContactPage() {
                 <div className='space-y-4'>
                   <div className='flex items-start'>
                     <MapPin className='w-6 h-6 mr-2 text-pastel-green-500' />
-                    <p>Jl. Teratai Mekar VIII no 27</p>
+                    <p>
+                      Jl. Teratai Mekar VIII No.27, Mekar Mulya, Kec. Panyileukan, Kota
+                      Bandung, Jawa Barat 40292
+                    </p>
                   </div>
                   <div className='flex items-center'>
                     <Phone className='w-6 h-6 mr-2 text-pastel-green-500' />
-                    <p>(62) 85721549005</p>
+                    <p>(62) 85819900061</p>
                   </div>
                   <div className='flex items-center'>
                     <Mail className='w-6 h-6 mr-2 text-pastel-green-500' />
-                    <p>info@tknuryanti.com</p>
+                    <p>admin@nuryantiislamicmontessori.com</p>
                   </div>
                   <div className='flex items-start'>
                     <Clock className='w-6 h-6 mr-2 text-pastel-green-500' />

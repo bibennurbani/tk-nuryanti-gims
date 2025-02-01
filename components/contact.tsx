@@ -100,7 +100,7 @@ export default function Contact() {
             </Button>
             <Button variant='outline' asChild>
               <a
-                href='https://wa.me/1234567890'
+                href='https://wa.me/6285819900061'
                 target='_blank'
                 rel='noopener noreferrer'>
                 Contact Via Whatsapp

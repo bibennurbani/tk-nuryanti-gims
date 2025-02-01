@@ -17,6 +17,7 @@ export function generateMetadata({}): Metadata {
     description:
       'TK Nuryanti Global Islamic Montessori School di Bandung menyediakan pendidikan Islam berkualitas dengan metode Montessori yang terbukti efektif. Bergabunglah untuk mendukung kreativitas, kemandirian, dan semangat belajar anak Anda.',
     keywords: [
+      'Sekolan Montessori Bandung',
       'TK Islam Bandung',
       'Montessori Bandung',
       'Pendidikan Islam Montessori',
@@ -40,7 +41,7 @@ export function generateMetadata({}): Metadata {
       type: 'website',
       images: [
         {
-          url: 'https://nuryantiislamicmontessori.com/assets/images/og-image.jpg',
+          url: 'https://nuryantiislamicmontessori.com/assets/montessori/montessori4.jpg',
           width: 1200,
           height: 630,
           alt: 'TK Nuryanti Global Islamic Montessori School',
@@ -54,7 +55,7 @@ export function generateMetadata({}): Metadata {
       title: 'TK Nuryanti Global Islamic Montessori School',
       description:
         'Gabung bersama TK Nuryanti Global Islamic Montessori School untuk pendidikan Islami yang kreatif dan inovatif di Bandung.',
-      images: ['https://nuryantiislamicmontessori.com/assets/images/og-image.jpg'],
+      images: ['https://nuryantiislamicmontessori.com/assets/montessori/montessori4.jpg'],
     },
   };
 }

@@ -11,31 +11,32 @@ export const metadata: Metadata = {
 
 const teachers = [
   {
-    name: 'Ibu Siti Nurhaliza',
-    role: 'Kepala Sekolah',
-    image: '/teacher-1.jpg',
+    name: 'Ibu Citra',
+    role: 'Guru Kelas',
+    image: '/placeholder.svg',
     description:
-      'Berpengalaman lebih dari 15 tahun dalam pendidikan Montessori dan manajemen sekolah.',
+      'Guru lulusan Universitas Pendidikan Indonesia yang sudah memiliki sertifikasi untuk menjadi guru montessori, Berpengalaman dalam pendidikan montessori dan manajemen sekolah',
   },
   {
-    name: 'Bapak Ahmad Dahlan',
-    role: 'Guru Kelas TK B',
-    image: '/teacher-2.jpg',
-    description: 'Spesialis dalam pengembangan literasi dan numerasi anak usia dini.',
+    name: 'Bapak Destian Nurfadli Hasan',
+    role: 'Guru Kelas',
+    image: '/placeholder.svg',
+    description:
+      'Guru lulusan Universitas Pendidikan Indonesia yang sudah memiliki sertifikasi untuk menjadi guru montessori,Spesialis dalam pengembangan literasi dan numerasi anak usia dini.',
   },
   {
-    name: 'Ibu Ratna Sari',
-    role: 'Guru Kelas TK A',
-    image: '/teacher-3.jpg',
+    name: 'Bapak Biben Nurbani Hasan',
+    role: 'Guru Kelas',
+    image: '/placeholder.svg',
     description:
-      'Ahli dalam metode Montessori untuk pengembangan sensorik dan motorik halus.',
+      'Guru lulusan Universitas Pasundan yang mahir dalam technology informasi dan algoritma, berpengalaman mengajarkan metode coding dalam pendidikan anak',
   },
   {
-    name: 'Bapak Budi Santoso',
-    role: 'Guru Kelompok Bermain',
-    image: '/teacher-4.jpg',
+    name: 'Ibu Lena Nuryanti',
+    role: 'Kepala Sekolah & Ketua Yayasan',
+    image: '/placeholder.svg',
     description:
-      'Fokus pada pengembangan sosial-emosional dan adaptasi anak usia 2-3 tahun.',
+      'Professor dan Guru Besar dari Universitas Pendidikan Indonesia yang sudah lebih dari 15 tahun berpengalaman dalam mengelola sekolah serta yayasan',
   },
 ];
 
@@ -93,7 +94,7 @@ export default function TeachersPage() {
               </ul>
             </div>
             <Image
-              src='/montessori-teaching.jpg'
+              src='/assets/montessori/montessori2.jpg'
               alt='Guru Montessori sedang mengajar'
               width={500}
               height={300}

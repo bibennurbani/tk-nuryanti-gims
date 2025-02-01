@@ -12,38 +12,38 @@ export const metadata: Metadata = {
 const games = [
   {
     name: 'Puzzle Peta Dunia',
-    image: '/game-world-map.jpg',
+    image: '/assets/games/game-world-map.png',
     description:
       'Membantu anak belajar geografi sambil meningkatkan keterampilan motorik halus.',
     ageGroup: '4-6 tahun',
   },
   {
     name: 'Menara Warna',
-    image: '/game-color-tower.jpg',
+    image: '/assets/games/game-color-tower.png',
     description: 'Mengajarkan konsep warna dan ukuran melalui permainan menyusun balok.',
     ageGroup: '2-4 tahun',
   },
   {
     name: 'Kartu Huruf Bergambar',
-    image: '/game-letter-cards.jpg',
+    image: '/assets/games/game-letter-cards.png',
     description: 'Mengenalkan huruf dan kosakata dengan cara yang menyenangkan.',
     ageGroup: '3-5 tahun',
   },
   {
     name: 'Papan Hitung',
-    image: '/game-counting-board.jpg',
+    image: '/assets/games/game-counting-board.png',
     description: 'Mengajarkan konsep angka dan perhitungan dasar secara konkret.',
     ageGroup: '4-6 tahun',
   },
   {
     name: 'Botol Sensori',
-    image: '/game-sensory-bottles.jpg',
+    image: '/assets/games/game-sensory-bottles.png',
     description: 'Merangsang indera penglihatan dan pendengaran anak.',
     ageGroup: '1-3 tahun',
   },
   {
     name: 'Papan Jahit',
-    image: '/game-sewing-board.jpg',
+    image: '/assets/games/game-sewing-board.png',
     description: 'Melatih koordinasi mata-tangan dan konsentrasi.',
     ageGroup: '3-6 tahun',
   },
@@ -156,7 +156,7 @@ export default function GamesPage() {
               </ul>
             </div>
             <Image
-              src='/montessori-at-home.jpg'
+              src='/assets/montessori/montessori7.jpg'
               alt='Bermain Montessori di Rumah'
               width={500}
               height={300}
