@@ -8,7 +8,7 @@ WORKDIR /app
 RUN npm install -g pnpm
 
 # Add dependencies for Prisma and better performance
-RUN apk add --no-cache libc6-compat openssl1.1-compat
+RUN apk add --no-cache libc6-compat openssl
 
 # Copy package.json, package-lock.json, and pnpm-lock.yaml
 COPY package*.json pnpm-lock.yaml ./
@@ -32,7 +32,7 @@ WORKDIR /app
 RUN npm install -g pnpm
 
 # Add required dependencies for production
-RUN apk add --no-cache libc6-compat openssl1.1-compat
+RUN apk add --no-cache libc6-compat openssl
 
 # Create a non-root user for security
 RUN addgroup --system --gid 1001 nodejs \
