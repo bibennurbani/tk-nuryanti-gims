@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className='min-h-screen bg-cream-100'>
+    <div className='min-h-screen bg-gray-50'>
       <HeroSection
         title='Hubungi Kami'
         subtitle='Kami Siap Membantu Anda'
@@ -70,22 +70,22 @@ export default function ContactPage() {
                 <h2 className='text-2xl font-bold mb-6'>Informasi Kontak</h2>
                 <div className='space-y-4'>
                   <div className='flex items-start'>
-                    <MapPin className='w-6 h-6 mr-2 text-pastel-green-500' />
+                    <MapPin className='w-6 h-6 mr-2 text-navy-700' />
                     <p>
                       Jl. Teratai Mekar VIII No.27, Mekar Mulya, Kec. Panyileukan, Kota
                       Bandung, Jawa Barat 40614
                     </p>
                   </div>
                   <div className='flex items-center'>
-                    <Phone className='w-6 h-6 mr-2 text-pastel-green-500' />
+                    <Phone className='w-6 h-6 mr-2 text-navy-700' />
                     <p>(62) 85819900061</p>
                   </div>
                   <div className='flex items-center'>
-                    <Mail className='w-6 h-6 mr-2 text-pastel-green-500' />
+                    <Mail className='w-6 h-6 mr-2 text-navy-700' />
                     <p>admin@nuryantiislamicmontessori.com</p>
                   </div>
                   <div className='flex items-start'>
-                    <Clock className='w-6 h-6 mr-2 text-pastel-green-500' />
+                    <Clock className='w-6 h-6 mr-2 text-navy-700' />
                     <div>
                       <p>Senin - Jumat: 07:00 - 15:00</p>
                       <p>Sabtu: 08:00 - 12:00</p>
@@ -99,7 +99,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-cream-100'>
+      <section className='py-16 bg-gray-50'>
         <div className='container mx-auto'>
           <h2 className='text-3xl font-bold text-center mb-12'>Lokasi Kami</h2>
           <div className='aspect-w-16 aspect-h-9'>

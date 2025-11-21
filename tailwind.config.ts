@@ -50,38 +50,45 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        cream: {
-          50: 'hsl(var(--cream-50))',
-          100: 'hsl(var(--cream-100))',
-          200: 'hsl(var(--cream-200))',
+        // New Brand Colors - Navy Blue
+        navy: {
+          900: '#002147',
+          800: '#003066',
+          700: '#003D73',
+          600: '#004A8C',
+          500: '#0059A6',
         },
-        'pastel-green': {
-          300: 'hsl(var(--pastel-green-300))',
-          400: 'hsl(var(--pastel-green-400))',
-          500: 'hsl(var(--pastel-green-500))',
-          600: 'hsl(var(--pastel-green-600))',
+        // New Brand Colors - Orange
+        orange: {
+          600: '#E68900',
+          500: '#FF9800',
+          400: '#FFA726',
+          300: '#FFB74D',
         },
-        'pastel-blue': {
-          300: 'hsl(var(--pastel-blue-300))',
-          400: 'hsl(var(--pastel-blue-400))',
-          500: 'hsl(var(--pastel-blue-500))',
-          600: 'hsl(var(--pastel-blue-600))',
-        },
-        'sunshine-yellow': {
-          300: 'hsl(var(--sunshine-yellow-300))',
-          400: 'hsl(var(--sunshine-yellow-400))',
-          500: 'hsl(var(--sunshine-yellow-500))',
-        },
-        'coral-pink': {
-          300: 'hsl(var(--coral-pink-300))',
-          400: 'hsl(var(--coral-pink-400))',
-          500: 'hsl(var(--coral-pink-500))',
+        // New Brand Colors - Gold
+        gold: {
+          600: '#F9A825',
+          500: '#FFB74D',
+          400: '#FFC870',
+          300: '#FFD89C',
         },
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      fontFamily: {
+        heading: ['var(--font-poppins)', 'sans-serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        special: ['var(--font-quicksand)', 'sans-serif'],
+      },
+      boxShadow: {
+        sm: '0 1px 2px rgba(0, 0, 0, 0.05)',
+        DEFAULT: '0 4px 6px rgba(0, 0, 0, 0.07)',
+        md: '0 4px 6px rgba(0, 0, 0, 0.07)',
+        lg: '0 10px 15px rgba(0, 0, 0, 0.1)',
+        xl: '0 20px 25px rgba(0, 0, 0, 0.15)',
       },
       keyframes: {
         'accordion-down': {

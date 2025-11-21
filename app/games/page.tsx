@@ -51,7 +51,7 @@ const games = [
 
 export default function GamesPage() {
   return (
-    <div className='min-h-screen bg-cream-100'>
+    <div className='min-h-screen bg-gray-50'>
       <HeroSection
         title='Permainan Edukatif Montessori'
         subtitle='Belajar Sambil Bermain dengan Metode Montessori'
@@ -85,7 +85,7 @@ export default function GamesPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-cream-100'>
+      <section className='py-16 bg-gray-50'>
         <div className='container mx-auto'>
           <h2 className='text-3xl font-bold text-center mb-12'>
             Manfaat Permainan Montessori

@@ -24,7 +24,10 @@ const fadeIn = {
 
 export default function Home() {
   return (
-    <div className='min-h-screen bg-cream-50'>
+    <div className='min-h-screen bg-white'>
+      {/* Add spacing for fixed navbar */}
+      <div className='h-20'></div>
+
       <HeroSection
         title='Belajar Mandiri dan Kreatif dengan Metode Montessori'
         subtitle='di TK Nuryanti Global Islamic Montessori School'
@@ -42,16 +45,16 @@ export default function Home() {
             whileInView={fadeIn.animate}
             transition={fadeIn.transition}
             viewport={{ once: true }}>
-            <h2 className='text-3xl md:text-4xl font-bold mb-8 text-gray-800'>
+            <h2 className='text-3xl md:text-4xl font-bold mb-8 text-navy-800 font-heading'>
               Selamat Datang di TK Nuryanti Global Islamic Montessori School
             </h2>
-            <p className='text-lg text-gray-600 leading-relaxed mb-8'>
+            <p className='text-lg text-gray-700 leading-relaxed mb-8'>
               Pendidikan anak usia dini (PAUD) memiliki peran penting dalam membentuk
               karakter, moral, dan keterampilan dasar anak. TK Nuryanti Global Islamic
               Montessori School hadir untuk menjawab kebutuhan masyarakat akan pendidikan
               yang memadukan metode Montessori, nilai-nilai Islami, dan wawasan global.
             </p>
-            <p className='text-lg text-gray-600 leading-relaxed'>
+            <p className='text-lg text-gray-700 leading-relaxed'>
               Dengan pendekatan yang inovatif, TK NURYANTI GLOBAL ISLAMIC MONTESORI SCHOOL
               Ini berkomitmen untuk menciptakan generasi yang mandiri, berkarakter Islami,
               dan siap menghadapi tantangan dunia modern.
@@ -62,7 +65,7 @@ export default function Home() {
 
       {/* Vision & Mission Section */}
       <section
-        className='py-20 bg-gradient-to-b from-pastel-green-500/10 to-cream-100'
+        className='py-20 bg-gray-50'
         aria-label='Vision and mission TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
@@ -71,32 +74,32 @@ export default function Home() {
               whileInView={fadeIn.animate}
               transition={fadeIn.transition}
               viewport={{ once: true }}>
-              <h2 className='text-3xl font-bold mb-6'>Visi</h2>
+              <h2 className='text-3xl font-bold mb-6 text-navy-800 font-heading'>Visi</h2>
               <p className='text-lg text-gray-700 mb-8'>
                 Menciptakan generasi yang mandiri, berakhlak mulia, dan berwawasan global
                 melalui pendekatan Montessori Islami.
               </p>
-              <h2 className='text-3xl font-bold mb-6'>Misi</h2>
+              <h2 className='text-3xl font-bold mb-6 text-navy-800 font-heading'>Misi</h2>
               <ul className='space-y-4 text-gray-700'>
                 <li className='flex items-start'>
-                  <Star className='w-6 h-6 text-pastel-green-500 mr-2 flex-shrink-0 mt-1' />
+                  <Star className='w-6 h-6 text-orange-500 mr-2 flex-shrink-0 mt-1' />
                   <span>
                     Mengintegrasikan metode Montessori dengan pendidikan nilai-nilai
                     Islam.
                   </span>
                 </li>
                 <li className='flex items-start'>
-                  <Star className='w-6 h-6 text-pastel-green-500 mr-2 flex-shrink-0 mt-1' />
+                  <Star className='w-6 h-6 text-orange-500 mr-2 flex-shrink-0 mt-1' />
                   <span>Menyediakan fasilitas pembelajaran yang modern dan aman.</span>
                 </li>
                 <li className='flex items-start'>
-                  <Star className='w-6 h-6 text-pastel-green-500 mr-2 flex-shrink-0 mt-1' />
+                  <Star className='w-6 h-6 text-orange-500 mr-2 flex-shrink-0 mt-1' />
                   <span>
                     Melatih tenaga pendidik profesional yang bersertifikasi Montessori.
                   </span>
                 </li>
                 <li className='flex items-start'>
-                  <Star className='w-6 h-6 text-pastel-green-500 mr-2 flex-shrink-0 mt-1' />
+                  <Star className='w-6 h-6 text-orange-500 mr-2 flex-shrink-0 mt-1' />
                   <span>
                     Mengembangkan program pembelajaran yang mendukung kreativitas dan
                     kemandirian anak.
@@ -127,7 +130,7 @@ export default function Home() {
         aria-label='Core and Values of TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <motion.h2
-            className='text-3xl md:text-4xl font-bold text-center mb-16'
+            className='text-3xl md:text-4xl font-bold text-center mb-16 text-navy-800 font-heading'
             initial={fadeIn.initial}
             whileInView={fadeIn.animate}
             transition={fadeIn.transition}
@@ -141,12 +144,12 @@ export default function Home() {
               whileInView={fadeIn.animate}
               transition={{ ...fadeIn.transition, delay: 0.2 }}
               viewport={{ once: true }}>
-              <Card className='h-full transition-all duration-300 hover:shadow-xl'>
+              <Card className='h-full transition-all duration-300 hover:shadow-lg border-2 hover:border-orange-500'>
                 <CardContent className='p-8'>
                   <div className='mb-6 flex justify-center'>
-                    <Heart className='w-16 h-16 text-pastel-green-500 group-hover:scale-110 transition-transform duration-300' />
+                    <Heart className='w-16 h-16 text-orange-500 group-hover:scale-110 transition-transform duration-300' />
                   </div>
-                  <h3 className='text-xl font-bold text-center mb-4'>
+                  <h3 className='text-xl font-bold text-center mb-4 font-heading text-navy-800'>
                     Islamic Character
                   </h3>
                   <p className='text-gray-600 text-center'>
@@ -162,12 +165,14 @@ export default function Home() {
               whileInView={fadeIn.animate}
               transition={{ ...fadeIn.transition, delay: 0.4 }}
               viewport={{ once: true }}>
-              <Card className='h-full transition-all duration-300 hover:shadow-xl'>
+              <Card className='h-full transition-all duration-300 hover:shadow-lg border-2 hover:border-orange-500'>
                 <CardContent className='p-8'>
                   <div className='mb-6 flex justify-center'>
-                    <BookOpen className='w-16 h-16 text-pastel-blue-500 group-hover:scale-110 transition-transform duration-300' />
+                    <BookOpen className='w-16 h-16 text-navy-700 group-hover:scale-110 transition-transform duration-300' />
                   </div>
-                  <h3 className='text-xl font-bold text-center mb-4'>Independence</h3>
+                  <h3 className='text-xl font-bold text-center mb-4 font-heading text-navy-800'>
+                    Independence
+                  </h3>
                   <p className='text-gray-600 text-center'>
                     Mengembangkan kemampuan anak untuk berpikir dan bertindak secara
                     mandiri
@@ -182,12 +187,12 @@ export default function Home() {
               whileInView={fadeIn.animate}
               transition={{ ...fadeIn.transition, delay: 0.6 }}
               viewport={{ once: true }}>
-              <Card className='h-full transition-all duration-300 hover:shadow-xl'>
+              <Card className='h-full transition-all duration-300 hover:shadow-lg border-2 hover:border-orange-500'>
                 <CardContent className='p-8'>
                   <div className='mb-6 flex justify-center'>
-                    <Globe2 className='w-16 h-16 text-pastel-green-500 group-hover:scale-110 transition-transform duration-300' />
+                    <Globe2 className='w-16 h-16 text-gold-600 group-hover:scale-110 transition-transform duration-300' />
                   </div>
-                  <h3 className='text-xl font-bold text-center mb-4'>
+                  <h3 className='text-xl font-bold text-center mb-4 font-heading text-navy-800'>
                     Global Perspective
                   </h3>
                   <p className='text-gray-600 text-center'>
@@ -202,11 +207,11 @@ export default function Home() {
 
       {/* Philosophy Section */}
       <section
-        className='py-20 bg-cream-100'
+        className='py-20 bg-gray-50'
         aria-label='Philosophy of TK Nuryanti Global Islamic Montessori School'>
         <div className='container mx-auto px-4'>
           <motion.h2
-            className='text-3xl md:text-4xl font-bold text-center mb-16'
+            className='text-3xl md:text-4xl font-bold text-center mb-16 text-navy-800 font-heading'
             initial={fadeIn.initial}
             whileInView={fadeIn.animate}
             transition={fadeIn.transition}
@@ -219,10 +224,12 @@ export default function Home() {
               whileInView={fadeIn.animate}
               transition={{ ...fadeIn.transition, delay: 0.2 }}
               viewport={{ once: true }}>
-              <Card className='transition-all duration-300 hover:shadow-lg group'>
+              <Card className='transition-all duration-300 hover:shadow-lg group border-2 hover:border-orange-500'>
                 <CardContent className='flex flex-col items-center p-8'>
-                  <BookOpen className='w-16 h-16 text-pastel-green-500 mb-6 group-hover:scale-110 transition-transform duration-300' />
-                  <h3 className='text-xl font-semibold mb-4'>Belajar Mandiri</h3>
+                  <BookOpen className='w-16 h-16 text-navy-700 mb-6 group-hover:scale-110 transition-transform duration-300' />
+                  <h3 className='text-xl font-semibold mb-4 font-heading text-navy-800'>
+                    Belajar Mandiri
+                  </h3>
                   <p className='text-center text-gray-600'>
                     Anak-anak didorong untuk mengeksplorasi dan belajar sesuai minat
                     mereka.
@@ -235,10 +242,12 @@ export default function Home() {
               whileInView={fadeIn.animate}
               transition={{ ...fadeIn.transition, delay: 0.4 }}
               viewport={{ once: true }}>
-              <Card className='transition-all duration-300 hover:shadow-lg group'>
+              <Card className='transition-all duration-300 hover:shadow-lg group border-2 hover:border-orange-500'>
                 <CardContent className='flex flex-col items-center p-8'>
-                  <PuzzlePiece className='w-16 h-16 text-pastel-blue-500 mb-6 group-hover:scale-110 transition-transform duration-300' />
-                  <h3 className='text-xl font-semibold mb-4'>Pembelajaran Praktis</h3>
+                  <PuzzlePiece className='w-16 h-16 text-orange-500 mb-6 group-hover:scale-110 transition-transform duration-300' />
+                  <h3 className='text-xl font-semibold mb-4 font-heading text-navy-800'>
+                    Pembelajaran Praktis
+                  </h3>
                   <p className='text-center text-gray-600'>
                     Menggunakan alat peraga dan aktivitas hands-on untuk pemahaman
                     mendalam.
@@ -251,10 +260,12 @@ export default function Home() {
               whileInView={fadeIn.animate}
               transition={{ ...fadeIn.transition, delay: 0.6 }}
               viewport={{ once: true }}>
-              <Card className='transition-all duration-300 hover:shadow-lg group'>
+              <Card className='transition-all duration-300 hover:shadow-lg group border-2 hover:border-orange-500'>
                 <CardContent className='flex flex-col items-center p-8'>
-                  <Building2 className='w-16 h-16 text-pastel-green-500 mb-6 group-hover:scale-110 transition-transform duration-300' />
-                  <h3 className='text-xl font-semibold mb-4'>Lingkungan Terstruktur</h3>
+                  <Building2 className='w-16 h-16 text-gold-600 mb-6 group-hover:scale-110 transition-transform duration-300' />
+                  <h3 className='text-xl font-semibold mb-4 font-heading text-navy-800'>
+                    Lingkungan Terstruktur
+                  </h3>
                   <p className='text-center text-gray-600'>
                     Ruang kelas yang didesain untuk mendukung kemandirian dan eksplorasi.
                   </p>

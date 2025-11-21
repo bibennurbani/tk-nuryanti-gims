@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className='min-h-screen bg-cream-100'>
+    <div className='min-h-screen bg-gray-50'>
       <HeroSection
         title='Tentang TK Nuryanti'
         subtitle='Mengenal Lebih Dekat Sekolah Montessori Kami'
@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-cream-100'>
+      <section className='py-16 bg-gray-50'>
         <div className='container mx-auto'>
           <h2 className='text-3xl font-bold text-center mb-12'>Sejarah Sekolah</h2>
           <div className='relative'>
@@ -127,7 +127,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className='py-16 bg-cream-100'>
+      <section className='py-16 bg-gray-50'>
         <div className='container mx-auto'>
           <h2 className='text-3xl font-bold text-center mb-12'>Galeri Foto</h2>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>

@@ -40,10 +40,11 @@ New to the project? Start here:
 
 ### Feature Documentation
 
-| Document                                                               | Description                    | Status   |
-| ---------------------------------------------------------------------- | ------------------------------ | -------- |
-| **[Feature/TEMPLATE.md](./Feature/TEMPLATE.md)**                       | Feature documentation template | Template |
-| **[Feature/EXAMPLE_ChangeTheme.md](./Feature/EXAMPLE_ChangeTheme.md)** | Example feature documentation  | Example  |
+| Document                                                       | Description                        | Status      |
+| -------------------------------------------------------------- | ---------------------------------- | ----------- |
+| **[Feature/TEMPLATE.md](./Feature/TEMPLATE.md)**               | Feature documentation template     | Template    |
+| **[Feature/EXAMPLE_ChangeTheme.md](./Feature/EXAMPLE_ChangeTheme.md)** | Example feature documentation | Example     |
+| **[Feature/NewDesign/README.md](./Feature/NewDesign/README.md)** | Complete website redesign documentation | ✅ Completed |
 
 ## 🎯 Find What You Need
 
