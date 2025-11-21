@@ -37,7 +37,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle, imageSrc }) 
               <Button
                 size='lg'
                 variant='outline'
-                className='border-2 border-white text-white hover:bg-white hover:text-navy-800 font-semibold px-8 py-6 text-lg rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105'>
+                className='border-2 border-white bg-transparent text-white hover:bg-white hover:text-navy-800 font-semibold px-8 py-6 text-lg rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105'>
                 Lihat Program
               </Button>
             </div>

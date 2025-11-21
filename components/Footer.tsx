@@ -13,7 +13,7 @@ const Footer = () => {
               alt='Nuryanti Global Islamic School Montessori'
               width={200}
               height={60}
-              className='mb-4 brightness-0 invert'
+              className='mb-4'
             />
             <h3 className='text-xl font-semibold mb-3 font-heading'>
               TK Nuryanti Global Islamic Montessori School

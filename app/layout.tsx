@@ -85,7 +85,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <GoogleTagManager gtmId='GTM-P6NVZ3VX' />
       <Head>
         <link rel='canonical' href='https://nuryantiislamicmontessori.com/' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon.ico' sizes='any' />
+        <link rel='icon' href='/app/icon.png' type='image/png' />
+        <link rel='apple-touch-icon' href='/app/icon.png' />
         <meta name='robots' content='index, follow' />
         <meta
           name='google-site-verification'
