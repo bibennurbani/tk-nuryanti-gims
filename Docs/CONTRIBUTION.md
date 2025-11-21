@@ -57,10 +57,12 @@ Before contributing, ensure you have:
 ### Fork and Clone
 
 1. **Fork the Repository**
+
    - Visit https://github.com/bibennurbani/tk-nuryanti-gims
    - Click "Fork" button in the top-right corner
 
 2. **Clone Your Fork**
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/tk-nuryanti-gims.git
    cd tk-nuryanti-gims
@@ -74,17 +76,20 @@ Before contributing, ensure you have:
 ### Local Setup
 
 1. **Install Dependencies**
+
    ```bash
    pnpm install
    ```
 
 2. **Setup Environment Variables**
+
    ```bash
    cp .env.example .env
    # Edit .env with your local configuration
    ```
 
 3. **Setup Database**
+
    ```bash
    pnpm prisma generate
    pnpm prisma migrate dev
@@ -92,6 +97,7 @@ Before contributing, ensure you have:
    ```
 
 4. **Start Development Server**
+
    ```bash
    pnpm dev
    ```
@@ -168,6 +174,7 @@ git push origin feature/your-feature-name
 - **Use type inference** where obvious
 
 **Good:**
+
 ```typescript
 interface StudentData {
   childName: string;
@@ -183,6 +190,7 @@ function registerStudent(data: StudentData): Promise<{ success: boolean }> {
 ```
 
 **Bad:**
+
 ```typescript
 function registerStudent(data: any): any {
   // Implementation
@@ -199,10 +207,10 @@ import prisma from '@/lib/prisma';
 
 export default async function TeachersPage() {
   const teachers = await prisma.teacher.findMany();
-  
+
   return (
-    <div className="container mx-auto py-20">
-      {teachers.map(teacher => (
+    <div className='container mx-auto py-20'>
+      {teachers.map((teacher) => (
         <TeacherCard key={teacher.id} {...teacher} />
       ))}
     </div>
@@ -219,16 +227,13 @@ import { useState } from 'react';
 
 export default function InteractiveComponent() {
   const [isOpen, setIsOpen] = useState(false);
-  
-  return (
-    <button onClick={() => setIsOpen(!isOpen)}>
-      Toggle
-    </button>
-  );
+
+  return <button onClick={() => setIsOpen(!isOpen)}>Toggle</button>;
 }
 ```
 
 **Use Client Components Only For:**
+
 - Event handlers (onClick, onChange, etc.)
 - State (useState, useReducer)
 - Effects (useEffect)
@@ -252,9 +257,9 @@ interface ComponentProps {
 // 3. Component
 export function Component({ title, children, className }: ComponentProps) {
   // 4. Hooks (if client component)
-  
+
   // 5. Event handlers
-  
+
   // 6. Render
   return (
     <div className={cn('base-styles', className)}>
@@ -273,6 +278,7 @@ export function Component({ title, children, className }: ComponentProps) {
 - **Use custom colors** from tailwind.config.ts
 
 **Good:**
+
 ```typescript
 <div className={cn(
   'container mx-auto px-4',     // Layout
@@ -284,6 +290,7 @@ export function Component({ title, children, className }: ComponentProps) {
 ```
 
 **Bad:**
+
 ```typescript
 <div className="container mx-auto px-4 py-8 md:py-12 bg-white rounded-lg text-gray-800">
 ```
@@ -390,12 +397,14 @@ git commit -m "WIP"
 ### Commit Message Rules
 
 1. **Subject line**:
+
    - Imperative mood ("add", not "added" or "adds")
    - No period at the end
    - Max 72 characters
    - Capitalize first letter
 
 2. **Body** (optional):
+
    - Explain what and why, not how
    - Wrap at 72 characters
    - Separate from subject with blank line
@@ -420,20 +429,23 @@ git commit -m "WIP"
 ### Creating Pull Request
 
 1. **Push to Your Fork**
+
    ```bash
    git push origin feature/your-feature-name
    ```
 
 2. **Open Pull Request**
+
    - Go to your fork on GitHub
    - Click "New Pull Request"
    - Select your branch
    - Fill out the template
 
 3. **PR Title Format**
+
    ```
    [Type] Brief description
-   
+
    Examples:
    [Feature] Add student registration modal
    [Fix] Correct email template formatting
@@ -441,22 +453,28 @@ git commit -m "WIP"
    ```
 
 4. **PR Description Template**
+
    ```markdown
    ## Description
+
    Brief description of what this PR does
-   
+
    ## Changes
+
    - Change 1
    - Change 2
    - Change 3
-   
+
    ## Screenshots (if applicable)
+
    [Add screenshots]
-   
+
    ## Testing
+
    How to test these changes
-   
+
    ## Related Issues
+
    Closes #123
    ```
 
@@ -489,6 +507,7 @@ git push origin --delete feature/your-feature-name
 Before submitting PR, test:
 
 1. **Core Functionality**
+
    - [ ] All pages load without errors
    - [ ] Navigation works correctly
    - [ ] Forms submit successfully
@@ -496,11 +515,13 @@ Before submitting PR, test:
    - [ ] Images load properly
 
 2. **Responsive Design**
+
    - [ ] Mobile (375px width)
    - [ ] Tablet (768px width)
    - [ ] Desktop (1024px+ width)
 
 3. **Cross-Browser**
+
    - [ ] Chrome
    - [ ] Firefox
    - [ ] Safari
@@ -543,7 +564,7 @@ describe('Student Registration', () => {
     formData.append('address', 'Test Address');
 
     const result = await registerStudent(formData);
-    
+
     expect(result.success).toBe(true);
   });
 });
@@ -556,6 +577,7 @@ describe('Student Registration', () => {
 ### When to Update Documentation
 
 Update docs when you:
+
 - Add new features
 - Change existing behavior
 - Add/modify API endpoints
@@ -598,6 +620,7 @@ A clear description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce:
+
 1. Go to '...'
 2. Click on '...'
 3. See error
@@ -609,9 +632,10 @@ What you expected to happen.
 If applicable, add screenshots.
 
 **Environment:**
- - Browser: [e.g. Chrome 120]
- - OS: [e.g. macOS 14]
- - Version: [e.g. 1.2.3]
+
+- Browser: [e.g. Chrome 120]
+- OS: [e.g. macOS 14]
+- Version: [e.g. 1.2.3]
 
 **Additional context**
 Any other information about the problem.
@@ -662,6 +686,7 @@ Current focus areas:
 ### Questions?
 
 Don't hesitate to ask! We welcome:
+
 - Beginner questions
 - Clarification requests
 - Suggestions for improvement
@@ -672,6 +697,7 @@ Don't hesitate to ask! We welcome:
 ## 🏆 Recognition
 
 Contributors will be recognized in:
+
 - Project README
 - Release notes
 - Contributors page (if created)

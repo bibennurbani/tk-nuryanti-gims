@@ -26,6 +26,7 @@ Vercel is the creator of Next.js and provides the best deployment experience.
 ### Step 1: Prepare Database
 
 **Option A: Vercel Postgres**
+
 ```bash
 # Install Vercel CLI
 npm i -g vercel
@@ -38,6 +39,7 @@ vercel postgres create
 ```
 
 **Option B: External Database (Neon, Supabase)**
+
 1. Create account at neon.tech or supabase.com
 2. Create new PostgreSQL database
 3. Copy connection string
@@ -55,6 +57,7 @@ git push -u origin main
 ### Step 3: Deploy to Vercel
 
 **Via Vercel Dashboard:**
+
 1. Go to [vercel.com](https://vercel.com)
 2. Click "Import Project"
 3. Select your GitHub repository
@@ -161,6 +164,7 @@ cd /opt/tk-nuryanti-gims
 Use managed PostgreSQL from DigitalOcean, AWS RDS, or similar.
 
 **Option B: Docker PostgreSQL**
+
 ```yaml
 # Add to docker-compose.prod.yml
 services:
@@ -229,18 +233,18 @@ services:
     image: traefik:v2.10
     container_name: traefik
     command:
-      - "--api.dashboard=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.http.address=:80"
-      - "--entrypoints.https.address=:443"
-      - "--certificatesresolvers.letsencrypt.acme.email=admin@nuryantiislamicmontessori.com"
-      - "--certificatesresolvers.letsencrypt.acme.storage=/acme.json"
-      - "--certificatesresolvers.letsencrypt.acme.httpchallenge=true"
-      - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=http"
+      - '--api.dashboard=true'
+      - '--providers.docker=true'
+      - '--providers.docker.exposedbydefault=false'
+      - '--entrypoints.http.address=:80'
+      - '--entrypoints.https.address=:443'
+      - '--certificatesresolvers.letsencrypt.acme.email=admin@nuryantiislamicmontessori.com'
+      - '--certificatesresolvers.letsencrypt.acme.storage=/acme.json'
+      - '--certificatesresolvers.letsencrypt.acme.httpchallenge=true'
+      - '--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=http'
     ports:
-      - "80:80"
-      - "443:443"
+      - '80:80'
+      - '443:443'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./acme.json:/acme.json
@@ -283,6 +287,7 @@ docker-compose -f docker-compose.prod.yml ps
 ### Step 7: SSL Certificate
 
 SSL is automatically handled by Traefik with Let's Encrypt. Ensure:
+
 - Domain DNS points to server IP
 - Ports 80 and 443 are open
 - Wait a few minutes for certificate generation
@@ -376,11 +381,13 @@ Deploy on AWS using ECS/Fargate or EC2.
 ### Using AWS ECS (Elastic Container Service)
 
 **Prerequisites:**
+
 - AWS account
 - AWS CLI installed
 - Docker image pushed to ECR
 
 **Steps:**
+
 1. Create RDS PostgreSQL instance
 2. Push Docker image to ECR
 3. Create ECS cluster
@@ -416,11 +423,13 @@ curl https://nuryantiislamicmontessori.com/api/health
 ### 3. Monitor Logs
 
 **Vercel:**
+
 ```bash
 vercel logs
 ```
 
 **Docker:**
+
 ```bash
 docker-compose -f docker-compose.prod.yml logs -f
 ```
@@ -431,16 +440,19 @@ View in Railway dashboard
 ### 4. Setup Monitoring
 
 **Option A: UptimeRobot**
+
 - Free tier available
 - Monitor website uptime
 - Email alerts on downtime
 
 **Option B: Sentry**
+
 - Error tracking
 - Performance monitoring
 - Free tier available
 
 **Option C: LogTail/BetterStack**
+
 - Log aggregation
 - Real-time monitoring
 
@@ -475,16 +487,19 @@ pnpm build && npx @next/bundle-analyzer
 ## 📊 Monitoring & Maintenance
 
 ### Daily Tasks
+
 - Monitor error logs
 - Check email delivery
 - Verify site accessibility
 
 ### Weekly Tasks
+
 - Review registration submissions
 - Check disk space (if self-hosted)
 - Review analytics
 
 ### Monthly Tasks
+
 - Update dependencies
 - Review and apply security patches
 - Database backup verification
@@ -493,12 +508,14 @@ pnpm build && npx @next/bundle-analyzer
 ### Database Backups
 
 **Automatic Backups (Docker):**
+
 ```bash
 # Backup script runs daily via cron
 # Backups stored in ./backups/
 ```
 
 **Manual Backup:**
+
 ```bash
 # Docker deployment
 ./scripts/backup-database.sh
@@ -508,6 +525,7 @@ pg_dump $DATABASE_URL > backup-$(date +%Y%m%d).sql
 ```
 
 **Restore from Backup:**
+
 ```bash
 # Restore database
 psql $DATABASE_URL < backup-20240101.sql
@@ -520,6 +538,7 @@ psql $DATABASE_URL < backup-20240101.sql
 ### Issue: Build Fails
 
 **Solution:**
+
 ```bash
 # Clear cache and rebuild
 rm -rf .next node_modules
@@ -530,12 +549,14 @@ pnpm build
 ### Issue: Database Connection Failed
 
 **Check:**
+
 - DATABASE_URL format correct
 - Database is running
 - Firewall allows connection
 - Credentials are correct
 
 **Test Connection:**
+
 ```bash
 pnpm prisma db push
 ```
@@ -543,12 +564,14 @@ pnpm prisma db push
 ### Issue: Email Not Sending
 
 **Check:**
+
 - SMTP credentials correct
 - Port 587 not blocked
 - Gmail: Enable "App Passwords"
 - Check spam folder
 
 **Test:**
+
 ```bash
 # Use nodemailer test in Node REPL
 node
@@ -558,6 +581,7 @@ node
 ### Issue: Environment Variables Not Loading
 
 **Check:**
+
 - `.env` file exists
 - Variable names match exactly
 - No spaces around `=`
@@ -594,24 +618,24 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          
+
       - name: Install pnpm
         run: npm install -g pnpm
-        
+
       - name: Install dependencies
         run: pnpm install
-        
+
       - name: Run tests
         run: pnpm test # if tests exist
-        
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
@@ -653,16 +677,19 @@ jobs:
 ### Scaling Options
 
 **Vercel:**
+
 - Automatically scales
 - Upgrade plan for higher limits
 
 **Docker/VPS:**
+
 - Vertical: Upgrade server resources
 - Horizontal: Add more servers with load balancer
 - Database: Use read replicas
 - Cache: Add Redis for sessions/queries
 
 **Database:**
+
 - Connection pooling (Prisma built-in)
 - Read replicas for heavy reads
 - Upgrade to larger instance

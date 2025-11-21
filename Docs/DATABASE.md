@@ -135,6 +135,7 @@ model Student {
 **Purpose**: Store information about school teachers and staff.
 
 **Fields**:
+
 - `id` (String, PK): Unique identifier using CUID
 - `name` (String): Teacher's full name
 - `role` (String): Position/title (e.g., "Kepala Sekolah")
@@ -142,6 +143,7 @@ model Student {
 - `description` (String): Bio and experience
 
 **Example Data**:
+
 ```json
 {
   "id": "clx123abc",
@@ -153,13 +155,14 @@ model Student {
 ```
 
 **Queries**:
+
 ```typescript
 // Get all teachers
 const teachers = await prisma.teacher.findMany();
 
 // Get one teacher
 const teacher = await prisma.teacher.findUnique({
-  where: { id: 'clx123abc' }
+  where: { id: 'clx123abc' },
 });
 
 // Create teacher
@@ -168,8 +171,8 @@ const teacher = await prisma.teacher.create({
     name: 'Ibu Sarah',
     role: 'Guru Kelas',
     image: '/teacher.jpg',
-    description: 'Bio text'
-  }
+    description: 'Bio text',
+  },
 });
 ```
 
@@ -180,6 +183,7 @@ const teacher = await prisma.teacher.create({
 **Purpose**: Store educational programs offered by the school.
 
 **Fields**:
+
 - `id` (String, PK): Unique identifier
 - `title` (String): Program name
 - `description` (String): Program details
@@ -188,6 +192,7 @@ const teacher = await prisma.teacher.create({
 - `image` (String): Program image path
 
 **Example Data**:
+
 ```json
 {
   "id": "clx456def",
@@ -200,6 +205,7 @@ const teacher = await prisma.teacher.create({
 ```
 
 **Queries**:
+
 ```typescript
 // Get all programs
 const programs = await prisma.program.findMany();
@@ -207,7 +213,7 @@ const programs = await prisma.program.findMany();
 // Update program
 const program = await prisma.program.update({
   where: { id: 'clx456def' },
-  data: { title: 'New Title' }
+  data: { title: 'New Title' },
 });
 ```
 
@@ -218,6 +224,7 @@ const program = await prisma.program.update({
 **Purpose**: Store parent and student testimonials.
 
 **Fields**:
+
 - `id` (String, PK): Unique identifier
 - `name` (String): Person's name
 - `role` (String): Relationship (e.g., "Orang Tua Murid")
@@ -225,6 +232,7 @@ const program = await prisma.program.update({
 - `quote` (String): Testimonial text
 
 **Example Data**:
+
 ```json
 {
   "id": "clx789ghi",
@@ -242,6 +250,7 @@ const program = await prisma.program.update({
 **Purpose**: Catalog Montessori educational materials and games.
 
 **Fields**:
+
 - `id` (String, PK): Unique identifier
 - `name` (String): Game/material name
 - `image` (String): Image path
@@ -249,6 +258,7 @@ const program = await prisma.program.update({
 - `ageGroup` (String): Recommended age range
 
 **Example Data**:
+
 ```json
 {
   "id": "clx012jkl",
@@ -266,6 +276,7 @@ const program = await prisma.program.update({
 **Purpose**: Store student registration information.
 
 **Fields**:
+
 - `id` (String, PK): Unique identifier
 - `childName` (String): Child's full name
 - `parentName` (String): Parent/guardian name
@@ -274,6 +285,7 @@ const program = await prisma.program.update({
 - `address` (String): Home address
 
 **Example Data**:
+
 ```json
 {
   "id": "clx345mno",
@@ -309,6 +321,7 @@ export default prisma;
 ```
 
 **Why Singleton Pattern?**
+
 - Prevents multiple instances in development (hot reload)
 - Reduces database connections
 - Improves performance
@@ -346,7 +359,7 @@ const students = await prisma.student.findMany({
     childName: 'asc',
   },
   take: 10, // limit
-  skip: 0,  // offset
+  skip: 0, // offset
 });
 
 // Find one
@@ -433,6 +446,7 @@ pnpm prisma migrate deploy
 ### Migration Files
 
 Located in `prisma/migrations/`:
+
 ```
 migrations/
 ├── 20240101120000_init/
@@ -525,6 +539,7 @@ pnpm prisma studio
 Opens at http://localhost:5555
 
 Features:
+
 - View all tables and data
 - Edit records
 - Create new records
@@ -559,7 +574,7 @@ model Student {
 model Student {
   id    String @id @default(cuid())
   email String @unique  // Unique constraint
-  
+
   @@index([childName])   // Index for faster queries
 }
 ```
@@ -585,6 +600,7 @@ model Class {
 ### Issue: "Migration failed to apply"
 
 **Solution**:
+
 ```bash
 # Reset database (development only)
 pnpm prisma migrate reset
@@ -596,11 +612,13 @@ pnpm prisma migrate resolve --rolled-back "migration_name"
 ### Issue: "Can't reach database server"
 
 **Check**:
+
 1. DATABASE_URL is correct
 2. Database is running
 3. Network/firewall allows connection
 
 **Test connection**:
+
 ```bash
 pnpm prisma db push
 ```
@@ -608,6 +626,7 @@ pnpm prisma db push
 ### Issue: "Prisma Client not generated"
 
 **Solution**:
+
 ```bash
 pnpm prisma generate
 ```
@@ -617,6 +636,7 @@ pnpm prisma generate
 Happens when database schema doesn't match migrations.
 
 **Solution**:
+
 ```bash
 pnpm prisma migrate dev
 ```
@@ -631,7 +651,7 @@ const students = await prisma.student.findMany();
 
 // Select only needed
 const students = await prisma.student.findMany({
-  select: { id: true, childName: true }
+  select: { id: true, childName: true },
 });
 ```
 
@@ -640,7 +660,7 @@ const students = await prisma.student.findMany({
 ```prisma
 model Student {
   email String
-  
+
   @@index([email])  // Index frequently queried fields
 }
 ```

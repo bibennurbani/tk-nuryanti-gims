@@ -31,17 +31,17 @@ pnpm lint
 
 ## 📁 Important File Locations
 
-| What | Where |
-|------|-------|
-| **Pages** | `app/*/page.tsx` |
-| **Components** | `components/` |
-| **Server Actions** | `app/actions.ts` |
-| **API Routes** | `app/api/*/route.ts` |
-| **Database Schema** | `prisma/schema.prisma` |
-| **Environment Config** | `.env` |
-| **Tailwind Config** | `tailwind.config.ts` |
-| **TypeScript Config** | `tsconfig.json` |
-| **Docker Config** | `docker-compose.yml` / `Dockerfile` |
+| What                   | Where                               |
+| ---------------------- | ----------------------------------- |
+| **Pages**              | `app/*/page.tsx`                    |
+| **Components**         | `components/`                       |
+| **Server Actions**     | `app/actions.ts`                    |
+| **API Routes**         | `app/api/*/route.ts`                |
+| **Database Schema**    | `prisma/schema.prisma`              |
+| **Environment Config** | `.env`                              |
+| **Tailwind Config**    | `tailwind.config.ts`                |
+| **TypeScript Config**  | `tsconfig.json`                     |
+| **Docker Config**      | `docker-compose.yml` / `Dockerfile` |
 
 ---
 
@@ -53,7 +53,7 @@ pnpm lint
 // app/new-page/page.tsx
 export default function NewPage() {
   return (
-    <div className="container mx-auto py-20">
+    <div className='container mx-auto py-20'>
       <h1>New Page</h1>
     </div>
   );
@@ -109,6 +109,7 @@ model MyModel {
 ```
 
 Then run:
+
 ```bash
 pnpm prisma migrate dev --name add_my_model
 ```
@@ -164,11 +165,11 @@ docker-compose up -d --build
 
 ```typescript
 // Available Tailwind classes
-bg-cream-50, bg-cream-100, bg-cream-200
-bg-pastel-green-300, bg-pastel-green-400, bg-pastel-green-500
-bg-pastel-blue-300, bg-pastel-blue-400, bg-pastel-blue-500
-bg-sunshine-yellow-300, bg-sunshine-yellow-400
-bg-coral-pink-300, bg-coral-pink-400
+bg - cream - 50, bg - cream - 100, bg - cream - 200;
+bg - pastel - green - 300, bg - pastel - green - 400, bg - pastel - green - 500;
+bg - pastel - blue - 300, bg - pastel - blue - 400, bg - pastel - blue - 500;
+bg - sunshine - yellow - 300, bg - sunshine - yellow - 400;
+bg - coral - pink - 300, bg - coral - pink - 400;
 ```
 
 ### Common Patterns
@@ -192,6 +193,7 @@ bg-coral-pink-300, bg-coral-pink-400
 ## 🔍 Troubleshooting
 
 ### Port already in use
+
 ```bash
 # Find process using port 3000
 lsof -i :3000
@@ -201,11 +203,13 @@ kill -9 <PID>
 ```
 
 ### Prisma Client not working
+
 ```bash
 pnpm prisma generate
 ```
 
 ### Environment variables not loading
+
 ```bash
 # Check .env file exists
 # Restart dev server
@@ -213,6 +217,7 @@ pnpm prisma generate
 ```
 
 ### Docker container won't start
+
 ```bash
 docker-compose logs <service-name>
 docker-compose restart <service-name>

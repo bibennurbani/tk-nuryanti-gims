@@ -47,7 +47,7 @@
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - pnpm
 - PostgreSQL database
 - Docker (optional)
@@ -128,6 +128,7 @@ We welcome contributions! Please see our [Contribution Guide](./Docs/CONTRIBUTIO
 **Last Updated**: November 21, 2025
 
 ### What's Working
+
 - ✅ Homepage with all sections
 - ✅ All informational pages (About, Classes, Games, Teachers, Contact)
 - ✅ Student registration form
@@ -138,6 +139,7 @@ We welcome contributions! Please see our [Contribution Guide](./Docs/CONTRIBUTIO
 - ✅ Docker deployment
 
 ### Recommended Improvements
+
 - 🔄 Complete database integration (currently commented out)
 - 🔄 Add input validation
 - 🔄 Implement error logging

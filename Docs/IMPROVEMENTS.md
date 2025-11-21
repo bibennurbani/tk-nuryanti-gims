@@ -28,22 +28,23 @@ This document outlines recommended improvements for the TK Nuryanti GIMS website
 ```
 
 **Recommendation**:
+
 ```typescript
 // app/actions.ts
 export async function registerStudent(formData: FormData) {
   // ... extract data
-  
+
   try {
     // 1. Save to database
     const student = await createStudent(studentData);
-    
+
     // 2. Send notifications
     await Promise.all([
       sendEmail(/* admin email */),
       sendEmail(/* confirmation email */),
-      sendWhatsAppMessage(/* notification */)
+      sendWhatsAppMessage(/* notification */),
     ]);
-    
+
     return { success: true, studentId: student.id };
   } catch (error) {
     // Proper error handling
@@ -54,6 +55,7 @@ export async function registerStudent(formData: FormData) {
 ```
 
 **Benefits**:
+
 - Persist student data
 - Track registrations
 - Enable admin dashboard
@@ -68,11 +70,13 @@ export async function registerStudent(formData: FormData) {
 **Recommendation**: Implement proper error handling and logging
 
 **Install Sentry** (Error Tracking):
+
 ```bash
 pnpm add @sentry/nextjs
 ```
 
 **Setup**:
+
 ```typescript
 // lib/logger.ts
 import * as Sentry from '@sentry/nextjs';
@@ -95,6 +99,7 @@ export const logger = {
 ```
 
 **Usage**:
+
 ```typescript
 import { logger } from '@/lib/logger';
 
@@ -119,6 +124,7 @@ pnpm add zod
 ```
 
 **Implementation**:
+
 ```typescript
 // lib/validations.ts
 import { z } from 'zod';
@@ -140,17 +146,17 @@ export async function registerStudent(formData: FormData) {
     phone: formData.get('phone'),
     address: formData.get('address'),
   };
-  
+
   // Validate
   const validationResult = studentRegistrationSchema.safeParse(rawData);
-  
+
   if (!validationResult.success) {
     return {
       success: false,
       errors: validationResult.error.flatten().fieldErrors,
     };
   }
-  
+
   const studentData = validationResult.data;
   // ... proceed with registration
 }
@@ -186,17 +192,15 @@ export function validateEnv() {
   };
 
   const missing: string[] = [];
-  
+
   for (const [key, description] of Object.entries(required)) {
     if (!process.env[key]) {
       missing.push(`${key} (${description})`);
     }
   }
-  
+
   if (missing.length > 0) {
-    throw new Error(
-      `Missing required environment variables:\n${missing.join('\n')}`
-    );
+    throw new Error(`Missing required environment variables:\n${missing.join('\n')}`);
   }
 }
 ```
@@ -214,6 +218,7 @@ pnpm add @upstash/ratelimit @upstash/redis
 ```
 
 **Implementation**:
+
 ```typescript
 // lib/ratelimit.ts
 import { Ratelimit } from '@upstash/ratelimit';
@@ -229,16 +234,16 @@ export const ratelimit = new Ratelimit({
 export async function registerStudent(formData: FormData) {
   // Get IP or session identifier
   const identifier = headers().get('x-forwarded-for') ?? 'anonymous';
-  
+
   const { success } = await ratelimit.limit(identifier);
-  
+
   if (!success) {
     return {
       success: false,
       error: 'Terlalu banyak percobaan. Silakan coba lagi nanti.',
     };
   }
-  
+
   // ... proceed with registration
 }
 ```
@@ -358,13 +363,13 @@ import { Button } from '@/components/ui/button';
 
 export function RegistrationForm() {
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const handleSubmit = async (formData: FormData) => {
     setIsLoading(true);
-    
+
     try {
       const result = await registerStudent(formData);
-      
+
       if (result.success) {
         toast.success('Pendaftaran berhasil!');
       }
@@ -372,11 +377,11 @@ export function RegistrationForm() {
       setIsLoading(false);
     }
   };
-  
+
   return (
     <form action={handleSubmit}>
       {/* fields */}
-      <Button type="submit" disabled={isLoading}>
+      <Button type='submit' disabled={isLoading}>
         {isLoading ? 'Mengirim...' : 'Daftar Sekarang'}
       </Button>
     </form>
@@ -390,7 +395,8 @@ export function RegistrationForm() {
 
 **Current Issue**: Some images might not be optimized
 
-**Recommendation**: 
+**Recommendation**:
+
 1. Use Next.js Image component everywhere
 2. Optimize all images with proper formats
 
@@ -419,6 +425,7 @@ import Image from 'next/image';
 ```
 
 **Image Optimization Script**:
+
 ```bash
 # Convert to WebP
 pnpm add sharp
@@ -450,7 +457,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://nuryantiislamicmontessori.com';
-  
+
   return [
     {
       url: baseUrl,
@@ -504,14 +511,14 @@ import prisma from '@/lib/prisma';
 
 export default async function AdminDashboard() {
   // Add authentication check here
-  
+
   const students = await prisma.student.findMany({
     orderBy: { createdAt: 'desc' },
     take: 50,
   });
-  
+
   return (
-    <div className="container mx-auto py-8">
+    <div className='container mx-auto py-8'>
       <h1>Pendaftaran Siswa Baru</h1>
       <table>
         <thead>
@@ -524,7 +531,7 @@ export default async function AdminDashboard() {
           </tr>
         </thead>
         <tbody>
-          {students.map(student => (
+          {students.map((student) => (
             <tr key={student.id}>
               <td>{student.childName}</td>
               <td>{student.parentName}</td>
@@ -607,14 +614,7 @@ pnpm add react-email @react-email/components
 
 ```typescript
 // emails/registration-confirmation.tsx
-import {
-  Body,
-  Container,
-  Head,
-  Heading,
-  Html,
-  Text,
-} from '@react-email/components';
+import { Body, Container, Head, Heading, Html, Text } from '@react-email/components';
 
 interface EmailProps {
   parentName: string;
@@ -628,9 +628,7 @@ export default function RegistrationEmail({ parentName, childName }: EmailProps)
       <Body style={{ fontFamily: 'sans-serif' }}>
         <Container>
           <Heading>Terima kasih, {parentName}!</Heading>
-          <Text>
-            Kami telah menerima pendaftaran untuk {childName}.
-          </Text>
+          <Text>Kami telah menerima pendaftaran untuk {childName}.</Text>
           {/* Styled email content */}
         </Container>
       </Body>
@@ -672,7 +670,7 @@ model Post {
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get('q');
-  
+
   const results = await prisma.$transaction([
     prisma.program.findMany({
       where: {
@@ -691,7 +689,7 @@ export async function GET(request: Request) {
       },
     }),
   ]);
-  
+
   return NextResponse.json(results);
 }
 ```
@@ -712,8 +710,7 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
       <button
         onClick={() => {
           navigator.share({ url, title });
-        }}
-      >
+        }}>
         Bagikan
       </button>
     </div>
@@ -824,6 +821,7 @@ pnpm add -D prettier eslint-config-prettier
 ## 📝 Implementation Roadmap
 
 ### Phase 1: Critical (Week 1-2)
+
 - [ ] Complete database integration
 - [ ] Add input validation
 - [ ] Implement error handling and logging
@@ -831,6 +829,7 @@ pnpm add -D prettier eslint-config-prettier
 - [ ] Security headers
 
 ### Phase 2: Important (Week 3-4)
+
 - [ ] Loading states
 - [ ] Complete i18n
 - [ ] Admin dashboard
@@ -838,6 +837,7 @@ pnpm add -D prettier eslint-config-prettier
 - [ ] SEO enhancements
 
 ### Phase 3: Enhancement (Week 5-8)
+
 - [ ] Email templates
 - [ ] Testing infrastructure
 - [ ] Blog/news section

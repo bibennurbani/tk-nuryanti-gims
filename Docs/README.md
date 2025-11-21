@@ -33,6 +33,7 @@
 ### Project Purpose
 
 This website aims to:
+
 1. **Increase Visibility**: Provide online presence for the school
 2. **Streamline Registration**: Simplify the student enrollment process
 3. **Build Trust**: Showcase qualified teachers and proven methods
@@ -42,6 +43,7 @@ This website aims to:
 ## 🛠 Technology Stack
 
 ### Frontend
+
 - **Framework**: Next.js 15.1.2 (App Router)
 - **React**: 19.0.0
 - **TypeScript**: 5.7.3
@@ -52,23 +54,27 @@ This website aims to:
 - **Font**: Nunito Sans (Google Fonts)
 
 ### Backend & Database
+
 - **Database**: PostgreSQL
 - **ORM**: Prisma 6.3.0
 - **Server Actions**: Next.js Server Actions
 - **API Routes**: Next.js API Routes
 
 ### Integrations
+
 - **Email Service**: Nodemailer 6.10.0
 - **Analytics**: Google Tag Manager
 - **Internationalization**: next-intl 3.26.3
 
 ### Development Tools
+
 - **Package Manager**: pnpm
 - **Linting**: ESLint 9.19.0
 - **Containerization**: Docker & Docker Compose
 - **Version Control**: Git
 
 ### Deployment
+
 - **Containerization**: Docker multi-stage builds
 - **Orchestration**: Docker Compose
 - **Reverse Proxy**: Traefik (configured in labels)
@@ -192,56 +198,63 @@ Before you begin, ensure you have:
 ### Installation Steps
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/bibennurbani/tk-nuryanti-gims.git
    cd tk-nuryanti-gims
    ```
 
 2. **Install Dependencies**
+
    ```bash
    pnpm install
    ```
 
 3. **Set Up Environment Variables**
-   
+
    Create a `.env` file in the root directory:
+
    ```env
    # Database
    DATABASE_URL="postgresql://username:password@localhost:5432/tk_nuryanti?schema=public"
-   
+
    # Email Configuration (SMTP)
    SMTP_HOST="smtp.gmail.com"
    SMTP_PORT="587"
    SMTP_USER="your-email@gmail.com"
    SMTP_PASS="your-app-password"
    ADMIN_EMAIL="admin@nuryantiislamicmontessori.com"
-   
+
    # WhatsApp
    WHATSAPP_NUMBER="6281234567890"
    ```
 
 4. **Set Up Database**
-   
+
    Generate Prisma Client:
+
    ```bash
    pnpm prisma generate
    ```
-   
+
    Run migrations:
+
    ```bash
    pnpm prisma migrate dev
    ```
-   
+
    Seed the database:
+
    ```bash
    pnpm db:seed
    ```
 
 5. **Run Development Server**
+
    ```bash
    pnpm dev
    ```
-   
+
    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Quick Start with Docker
@@ -284,16 +297,19 @@ pnpm db:seed
 ### Database Management
 
 **View Database (Prisma Studio)**
+
 ```bash
 pnpm prisma studio
 ```
 
 **Create Migration**
+
 ```bash
 pnpm prisma migrate dev --name migration_name
 ```
 
 **Reset Database**
+
 ```bash
 pnpm prisma migrate reset
 ```
@@ -318,6 +334,7 @@ docker-compose -f docker-compose.prod.yml down
 ```
 
 See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment instructions including:
+
 - Vercel deployment
 - VPS/Cloud deployment
 - Environment configuration
@@ -346,6 +363,7 @@ This project is private and proprietary to TK Nuryanti Global Islamic Montessori
 ## 🤝 Support
 
 For questions or support:
+
 - Email: admin@nuryantiislamicmontessori.com
 - Website: https://nuryantiislamicmontessori.com
 - WhatsApp: +62 123 4567 890

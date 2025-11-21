@@ -7,18 +7,21 @@ This document describes the complete architecture of the TK Nuryanti Global Isla
 ## 🎯 Architecture Principles
 
 ### 1. Server-First Approach
+
 - **Server Components by Default**: Leveraging Next.js 15 App Router for optimal performance
 - **Client Components When Needed**: Only for interactivity (forms, animations, modals)
 - **Server Actions**: Handle form submissions and mutations server-side
 - **API Routes**: RESTful endpoints for external data access
 
 ### 2. Progressive Enhancement
+
 - Works without JavaScript (server-rendered content)
 - Enhanced with client-side interactivity
 - Optimized images with Next.js Image component
 - Lazy loading for better performance
 
 ### 3. Separation of Concerns
+
 - **Presentation Layer**: React components
 - **Business Logic**: Server Actions and API Routes
 - **Data Layer**: Prisma ORM with PostgreSQL
@@ -87,6 +90,7 @@ app/
 ```
 
 **Key Concepts:**
+
 - **`layout.tsx`**: Wraps all pages, includes Navbar and Footer
 - **`page.tsx`**: Individual route pages
 - **Server Actions**: Functions marked with `'use server'` for mutations
@@ -147,6 +151,7 @@ lib/
 ```
 
 **Best Practices:**
+
 - Keep business logic separate from UI components
 - Use singleton pattern for Prisma Client
 - Validate environment variables at startup
@@ -174,10 +179,10 @@ import prisma from '@/lib/prisma';
 export default async function TeachersPage() {
   // Direct database query in Server Component
   const teachers = await prisma.teacher.findMany();
-  
+
   return (
     <div>
-      {teachers.map(teacher => (
+      {teachers.map((teacher) => (
         <TeacherCard key={teacher.id} {...teacher} />
       ))}
     </div>
@@ -186,6 +191,7 @@ export default async function TeachersPage() {
 ```
 
 **Advantages:**
+
 - No API route needed
 - Faster initial page load
 - Better SEO (fully server-rendered)
@@ -202,21 +208,18 @@ import { registerStudent } from '@/app/actions';
 export function RegistrationModal() {
   const handleSubmit = async (formData: FormData) => {
     const result = await registerStudent(formData);
-    
+
     if (result.success) {
       // Show success message
     }
   };
-  
-  return (
-    <form action={handleSubmit}>
-      {/* Form fields */}
-    </form>
-  );
+
+  return <form action={handleSubmit}>{/* Form fields */}</form>;
 }
 ```
 
 **Flow:**
+
 1. User fills form
 2. Form submitted to Server Action
 3. Server Action processes data (database, email, WhatsApp)
@@ -237,6 +240,7 @@ export async function GET() {
 ```
 
 **Use Cases:**
+
 - External API consumption
 - Webhooks
 - Third-party integrations
@@ -283,10 +287,10 @@ export function Button({ className, ...props }) {
   return (
     <button
       className={cn(
-        "px-4 py-2 rounded-lg",  // Base styles
-        "bg-pastel-green-500",    // Color
-        "hover:bg-pastel-green-600", // Hover state
-        className                  // Allow override
+        'px-4 py-2 rounded-lg', // Base styles
+        'bg-pastel-green-500', // Color
+        'hover:bg-pastel-green-600', // Hover state
+        className // Allow override
       )}
       {...props}
     />
@@ -299,6 +303,7 @@ export function Button({ className, ...props }) {
 ### Environment Variables
 
 All sensitive data stored in environment variables:
+
 ```env
 DATABASE_URL=            # Database connection
 SMTP_HOST/PORT/USER/PASS # Email credentials
@@ -312,7 +317,7 @@ WHATSAPP_NUMBER          # WhatsApp integration
 // lib/env.ts
 export function validateEnv() {
   const required = ['SMTP_HOST', 'SMTP_PORT', ...];
-  
+
   for (const env of required) {
     if (!process.env[env]) {
       throw new Error(`Missing: ${env}`);
@@ -335,12 +340,12 @@ export function validateEnv() {
 import Image from 'next/image';
 
 <Image
-  src="/assets/hero.jpg"
-  alt="Hero"
+  src='/assets/hero.jpg'
+  alt='Hero'
   width={1200}
   height={600}
-  priority  // For LCP images
-/>
+  priority // For LCP images
+/>;
 ```
 
 ### 2. Code Splitting
@@ -354,7 +359,7 @@ import Image from 'next/image';
 ```typescript
 // Good: Select only needed fields
 const users = await prisma.user.findMany({
-  select: { id: true, name: true }
+  select: { id: true, name: true },
 });
 
 // Bad: Fetch all fields
@@ -374,16 +379,19 @@ export default function AboutPage() {
 ## 🧪 Testing Strategy (Recommended)
 
 ### Unit Tests
+
 - Test utility functions in `/lib`
 - Test individual components
 - Use Jest + React Testing Library
 
 ### Integration Tests
+
 - Test Server Actions
 - Test API routes
 - Test form submissions
 
 ### E2E Tests
+
 - Test critical user flows
 - Use Playwright or Cypress
 - Test registration process
@@ -422,16 +430,19 @@ FROM node:18-alpine AS runtime
 ## 🔄 State Management
 
 ### Server State
+
 - Managed by React Server Components
 - No client-side state management library needed
 - Data fetching happens on server
 
 ### Client State
+
 - Minimal client state (form inputs, modals)
 - React hooks (useState, useReducer)
 - No Redux/Zustand needed for this app
 
 ### Form State
+
 - Controlled by HTML form elements
 - Server Actions handle submissions
 - Toast notifications for feedback
@@ -472,7 +483,7 @@ export function Component() {
 // app/layout.tsx
 import { GoogleTagManager } from '@next/third-parties/google';
 
-<GoogleTagManager gtmId='GTM-P6NVZ3VX' />
+<GoogleTagManager gtmId='GTM-P6NVZ3VX' />;
 ```
 
 ### Health Checks
@@ -480,7 +491,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 ```yaml
 # docker-compose.yml
 healthcheck:
-  test: ["CMD", "wget", "--spider", "http://localhost:3000/"]
+  test: ['CMD', 'wget', '--spider', 'http://localhost:3000/']
   interval: 30s
   timeout: 10s
   retries: 3
@@ -491,6 +502,7 @@ healthcheck:
 ### Component Creation Pattern
 
 1. **Server Component (default)**
+
 ```typescript
 // No 'use client'
 export default async function ServerComponent() {
@@ -500,6 +512,7 @@ export default async function ServerComponent() {
 ```
 
 2. **Client Component (when needed)**
+
 ```typescript
 'use client';
 
@@ -517,13 +530,13 @@ export default function ClientComponent() {
 export async function actionName(formData: FormData) {
   // 1. Extract data
   const field = formData.get('field') as string;
-  
+
   // 2. Validate
   if (!field) throw new Error('Invalid');
-  
+
   // 3. Process
   await processData(field);
-  
+
   // 4. Return result
   return { success: true };
 }

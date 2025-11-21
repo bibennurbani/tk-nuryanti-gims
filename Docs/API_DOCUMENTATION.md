@@ -32,6 +32,7 @@ Fetch all educational programs.
 **Authentication**: None
 
 **Response**:
+
 ```json
 [
   {
@@ -46,10 +47,12 @@ Fetch all educational programs.
 ```
 
 **Response Codes**:
+
 - `200 OK`: Success
 - `500 Internal Server Error`: Database error
 
 **Implementation**:
+
 ```typescript
 // app/api/programs/route.ts
 import prisma from '@/lib/prisma';
@@ -62,6 +65,7 @@ export async function GET() {
 ```
 
 **Usage Example**:
+
 ```typescript
 const response = await fetch('/api/programs');
 const programs = await response.json();
@@ -80,6 +84,7 @@ Fetch all testimonials.
 **Authentication**: None
 
 **Response**:
+
 ```json
 [
   {
@@ -93,10 +98,12 @@ Fetch all testimonials.
 ```
 
 **Response Codes**:
+
 - `200 OK`: Success
 - `500 Internal Server Error`: Database error
 
 **Implementation**:
+
 ```typescript
 // app/api/testimonials/route.ts
 import prisma from '@/lib/prisma';
@@ -125,6 +132,7 @@ Handle student registration form submission.
 **Type**: Server Action (`'use server'`)
 
 **Parameters**:
+
 ```typescript
 FormData {
   childName: string      // Child's full name
@@ -136,13 +144,15 @@ FormData {
 ```
 
 **Returns**:
+
 ```typescript
 {
-  success: boolean       // true if registration succeeded
+  success: boolean; // true if registration succeeded
 }
 ```
 
 **Process Flow**:
+
 1. Extract form data
 2. ~~Save to database~~ (currently commented out)
 3. Send email to admin (registrasi@nuryantiislamicmontessori.com)
@@ -151,6 +161,7 @@ FormData {
 6. Return success status
 
 **Implementation**:
+
 ```typescript
 'use server';
 
@@ -199,6 +210,7 @@ export async function registerStudent(formData: FormData) {
 ```
 
 **Usage Example**:
+
 ```typescript
 'use client';
 
@@ -207,35 +219,36 @@ import { registerStudent } from '@/app/actions';
 export function RegistrationForm() {
   const handleSubmit = async (formData: FormData) => {
     const result = await registerStudent(formData);
-    
+
     if (result.success) {
       toast({
-        title: "Pendaftaran Berhasil!",
-        description: "Kami akan menghubungi Anda segera."
+        title: 'Pendaftaran Berhasil!',
+        description: 'Kami akan menghubungi Anda segera.',
       });
     } else {
       toast({
-        title: "Pendaftaran Gagal",
-        description: "Silakan coba lagi.",
-        variant: "destructive"
+        title: 'Pendaftaran Gagal',
+        description: 'Silakan coba lagi.',
+        variant: 'destructive',
       });
     }
   };
 
   return (
     <form action={handleSubmit}>
-      <input name="childName" required />
-      <input name="parentName" required />
-      <input name="email" type="email" required />
-      <input name="phone" required />
-      <textarea name="address" required />
-      <button type="submit">Daftar</button>
+      <input name='childName' required />
+      <input name='parentName' required />
+      <input name='email' type='email' required />
+      <input name='phone' required />
+      <textarea name='address' required />
+      <button type='submit'>Daftar</button>
     </form>
   );
 }
 ```
 
 **Error Handling**:
+
 - Catches all errors and returns `{ success: false }`
 - Logs errors to console
 - Recommended: Add proper error logging service (Sentry)
@@ -259,6 +272,7 @@ model Teacher {
 ```
 
 **Fields**:
+
 - `id`: Unique identifier (CUID)
 - `name`: Teacher's full name
 - `role`: Position/title (e.g., "Kepala Sekolah")
@@ -266,6 +280,7 @@ model Teacher {
 - `description`: Bio/experience description
 
 **TypeScript Interface**:
+
 ```typescript
 interface Teacher {
   id: string;
@@ -292,6 +307,7 @@ model Program {
 ```
 
 **Fields**:
+
 - `id`: Unique identifier (CUID)
 - `title`: Program name
 - `description`: Program description
@@ -300,6 +316,7 @@ model Program {
 - `image`: Program image URL/path
 
 **TypeScript Interface**:
+
 ```typescript
 interface Program {
   id: string;
@@ -326,6 +343,7 @@ model Testimonial {
 ```
 
 **Fields**:
+
 - `id`: Unique identifier (CUID)
 - `name`: Person's name
 - `role`: Role/relationship (e.g., "Orang Tua Murid")
@@ -333,6 +351,7 @@ model Testimonial {
 - `quote`: Testimonial text
 
 **TypeScript Interface**:
+
 ```typescript
 interface Testimonial {
   id: string;
@@ -358,6 +377,7 @@ model Game {
 ```
 
 **Fields**:
+
 - `id`: Unique identifier (CUID)
 - `name`: Game/toy name
 - `image`: Image URL/path
@@ -365,6 +385,7 @@ model Game {
 - `ageGroup`: Recommended age range (e.g., "3-5 tahun")
 
 **TypeScript Interface**:
+
 ```typescript
 interface Game {
   id: string;
@@ -391,6 +412,7 @@ model Student {
 ```
 
 **Fields**:
+
 - `id`: Unique identifier (CUID)
 - `childName`: Child's full name
 - `parentName`: Parent/guardian name
@@ -399,6 +421,7 @@ model Student {
 - `address`: Home address
 
 **TypeScript Interface**:
+
 ```typescript
 interface Student {
   id: string;
@@ -423,19 +446,17 @@ interface Student {
 #### sendEmail Function
 
 ```typescript
-async function sendEmail(
-  to: string,
-  subject: string,
-  text: string
-): Promise<void>
+async function sendEmail(to: string, subject: string, text: string): Promise<void>;
 ```
 
 **Parameters**:
+
 - `to`: Recipient email address
 - `subject`: Email subject line
 - `text`: Email body (plain text)
 
 **Environment Variables Required**:
+
 ```env
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
@@ -445,6 +466,7 @@ ADMIN_EMAIL=admin@example.com
 ```
 
 **SMTP Configuration**:
+
 ```typescript
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -457,6 +479,7 @@ const transporter = nodemailer.createTransport({
 ```
 
 **Error Handling**:
+
 - Throws error if email fails to send
 - Logs error to console
 
@@ -465,6 +488,7 @@ const transporter = nodemailer.createTransport({
 #### Email Templates
 
 **Registration Email (to Admin)**:
+
 ```typescript
 function generateRegistrationEmailContent(formData: {
   childName: string;
@@ -472,10 +496,11 @@ function generateRegistrationEmailContent(formData: {
   email: string;
   phone: string;
   address: string;
-}): string
+}): string;
 ```
 
 **Returns**:
+
 ```
 Pendaftaran Siswa Baru:
 
@@ -489,14 +514,13 @@ Alamat: [address]
 ---
 
 **Confirmation Email (to Parent)**:
+
 ```typescript
-function generateConfirmationEmailContent(
-  parentName: string,
-  childName: string
-): string
+function generateConfirmationEmailContent(parentName: string, childName: string): string;
 ```
 
 **Returns**:
+
 ```
 Kepada Yth. [parentName],
 
@@ -513,15 +537,15 @@ Terima kasih telah mendaftarkan [childName] di TK Nuryanti...
 #### sendWhatsAppMessage Function
 
 ```typescript
-async function sendWhatsAppMessage(
-  message: string
-): Promise<void>
+async function sendWhatsAppMessage(message: string): Promise<void>;
 ```
 
 **Parameters**:
+
 - `message`: Text message to send
 
 **Environment Variables Required**:
+
 ```env
 WHATSAPP_NUMBER=6281234567890
 ```
@@ -536,6 +560,7 @@ Current implementation details not visible in provided code. Likely uses WhatsAp
 ### Complete Registration Flow
 
 **1. User Submits Form**
+
 ```typescript
 const formData = new FormData();
 formData.append('childName', 'Ahmad Budi');
@@ -548,15 +573,17 @@ const result = await registerStudent(formData);
 ```
 
 **2. Server Processes**
+
 - Validates form data
 - Sends 2 emails (admin + parent)
 - Sends WhatsApp notification
 - Returns result
 
 **3. Response**
+
 ```typescript
 {
-  success: true  // or false if error occurred
+  success: true; // or false if error occurred
 }
 ```
 
@@ -565,12 +592,14 @@ const result = await registerStudent(formData);
 ### Fetch Programs Example
 
 **Request**:
+
 ```typescript
 const response = await fetch('/api/programs');
 const programs = await response.json();
 ```
 
 **Response**:
+
 ```json
 [
   {
@@ -605,10 +634,7 @@ export async function GET() {
     return NextResponse.json(data);
   } catch (error) {
     console.error('Error fetching data:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch data' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
   }
 }
 ```
@@ -632,6 +658,7 @@ export async function serverAction(formData: FormData) {
 ## 🔮 Future API Endpoints (Recommendations)
 
 ### Authentication
+
 ```
 POST /api/auth/login
 POST /api/auth/register
@@ -640,6 +667,7 @@ GET  /api/auth/me
 ```
 
 ### Admin Panel
+
 ```
 GET    /api/admin/students
 POST   /api/admin/students
@@ -653,6 +681,7 @@ DELETE /api/admin/teachers/:id
 ```
 
 ### Dynamic Content
+
 ```
 GET  /api/events
 POST /api/events
@@ -661,6 +690,7 @@ POST /api/gallery/upload
 ```
 
 ### Analytics
+
 ```
 GET /api/analytics/visitors
 GET /api/analytics/registrations
@@ -678,14 +708,11 @@ import { ratelimit } from '@/lib/ratelimit';
 export async function POST(request: Request) {
   const ip = request.headers.get('x-forwarded-for') ?? 'anonymous';
   const { success } = await ratelimit.limit(ip);
-  
+
   if (!success) {
-    return NextResponse.json(
-      { error: 'Too many requests' },
-      { status: 429 }
-    );
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
   }
-  
+
   // Process request
 }
 ```
@@ -719,7 +746,7 @@ describe('Programs API', () => {
   it('returns programs array', async () => {
     const response = await GET();
     const data = await response.json();
-    
+
     expect(Array.isArray(data)).toBe(true);
     expect(data[0]).toHaveProperty('title');
   });
