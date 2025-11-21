@@ -31,11 +31,19 @@ New to the project? Start here:
 
 ### Guides
 
-| Document                                 | Description                               | When to Read          |
-| ---------------------------------------- | ----------------------------------------- | --------------------- |
-| **[DEPLOYMENT.md](./DEPLOYMENT.md)**     | Deployment instructions for all platforms | Deploying the app     |
-| **[CONTRIBUTION.md](./CONTRIBUTION.md)** | How to contribute to the project          | Contributing code     |
-| **[IMPROVEMENTS.md](./IMPROVEMENTS.md)** | Recommended improvements                  | Planning enhancements |
+| Document                                         | Description                               | When to Read          |
+| ------------------------------------------------ | ----------------------------------------- | --------------------- |
+| **[DEPLOYMENT.md](./DEPLOYMENT.md)**             | Deployment instructions for all platforms | Deploying the app     |
+| **[CONTRIBUTION.md](./CONTRIBUTION.md)**         | How to contribute to the project          | Contributing code     |
+| **[IMPROVEMENTS.md](./IMPROVEMENTS.md)**         | Recommended improvements                  | Planning enhancements |
+| **[FEATURE_WORKFLOW.md](./FEATURE_WORKFLOW.md)** | How to plan and document new features     | Adding new features   |
+
+### Feature Documentation
+
+| Document                                                               | Description                    | Status   |
+| ---------------------------------------------------------------------- | ------------------------------ | -------- |
+| **[Feature/TEMPLATE.md](./Feature/TEMPLATE.md)**                       | Feature documentation template | Template |
+| **[Feature/EXAMPLE_ChangeTheme.md](./Feature/EXAMPLE_ChangeTheme.md)** | Example feature documentation  | Example  |
 
 ## 🎯 Find What You Need
 
