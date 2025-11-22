@@ -38,6 +38,12 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
         title: 'Pendaftaran Berhasil',
         description: 'Terima kasih telah mendaftar. Kami akan segera menghubungi Anda.',
       });
+
+      // Open WhatsApp with pre-filled message
+      if (response.whatsappUrl) {
+        window.open(response.whatsappUrl, '_blank');
+      }
+
       onClose();
     } else {
       toast({

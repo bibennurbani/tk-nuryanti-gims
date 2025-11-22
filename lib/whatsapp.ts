@@ -1,11 +1,19 @@
+export function generateWhatsAppUrl(message: string): string {
+  const whatsappNumber =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || process.env.WHATSAPP_NUMBER;
+  const whatsappMessage = encodeURIComponent(message);
+  return `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+}
+
 export async function sendWhatsAppMessage(message: string) {
   try {
-    const whatsappNumber = process.env.WHATSAPP_NUMBER;
-    const whatsappMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`;
-    await fetch(whatsappUrl);
+    const whatsappUrl = generateWhatsAppUrl(message);
+
+    // For server-side, we just return the URL
+    // The actual opening will happen on the client side
+    return { success: true, url: whatsappUrl };
   } catch (error) {
-    console.error('Error sending WhatsApp message:', error);
-    throw new Error('Failed to send WhatsApp message');
+    console.error('Error generating WhatsApp message:', error);
+    throw new Error('Failed to generate WhatsApp message');
   }
 }

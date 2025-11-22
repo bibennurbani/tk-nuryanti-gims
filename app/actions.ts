@@ -28,24 +28,24 @@ export async function registerStudent(formData: FormData) {
       childName
     );
 
-    // Send email to registration team
-    await sendEmail(
-      'registrasi@nuryantiislamicmontessori.com',
-      'Pendaftaran Siswa Baru',
-      registrationEmailContent
-    );
+    // Generate WhatsApp URL (will be used on client side)
+    const whatsappResult = await sendWhatsAppMessage(registrationEmailContent);
 
-    // Send confirmation email to parent/user
-    await sendEmail(
-      email,
-      'Terima Kasih atas Pendaftaran Anda',
-      confirmationEmailContent
-    );
+    // // Send email to registration team
+    // await sendEmail(
+    //   'registrasi@nuryantiislamicmontessori.com',
+    //   'Pendaftaran Siswa Baru',
+    //   registrationEmailContent
+    // );
 
-    // Send WhatsApp message
-    await sendWhatsAppMessage(registrationEmailContent);
+    // // Send confirmation email to parent/user
+    // await sendEmail(
+    //   email,
+    //   'Terima Kasih atas Pendaftaran Anda',
+    //   confirmationEmailContent
+    // );
 
-    return { success: true };
+    return { success: true, whatsappUrl: whatsappResult.url };
   } catch (error) {
     console.error('Error processing registration:', error);
     return { success: false };
